@@ -74,12 +74,6 @@
     <Compile Include="FrmCartaPremio.Designer.cs">
       <DependentUpon>FrmCartaPremio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEjemplo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEjemplo.Designer.cs">
-      <DependentUpon>FrmEjemplo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmReporteCarta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCartaPremio.resx">
       <DependentUpon>FrmCartaPremio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEjemplo.resx">
-      <DependentUpon>FrmEjemplo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteCarta.resx">
       <DependentUpon>FrmReporteCarta.cs</DependentUpon>

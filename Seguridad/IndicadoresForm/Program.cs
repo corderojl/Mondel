@@ -15,7 +15,7 @@ namespace IndicadoresForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEjemplo());
+            Application.Run(new EvaluacionIndicadoresMDI());
         }
     }
 }

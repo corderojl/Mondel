@@ -185,7 +185,7 @@ namespace IncidentesWEB.admin
             ddlCausaInmediata.DataValueField = "Causainmediata_id";
             ddlCausaInmediata.DataTextField = "Causainmediata_desc";
             ddlCausaInmediata.DataBind();
-            ddlCausaInmediata.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
+            ddlClasificacion.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
             ddlCausaInmediata.SelectedValue = "0";
 
         }
@@ -310,7 +310,7 @@ namespace IncidentesWEB.admin
 
         protected void ddlClasificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (int.Parse(ddlClasificacion.SelectedValue) == 9 || int.Parse(ddlClasificacion.SelectedValue) == 10)
+            if (int.Parse(ddlClasificacion.SelectedValue) == 9)
             {
                 ddlEmpleado.SelectedValue = "0";
                 ddlEmpleado.Enabled = true;

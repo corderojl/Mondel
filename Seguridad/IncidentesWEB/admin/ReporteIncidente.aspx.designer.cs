@@ -40,13 +40,13 @@ namespace IncidentesWEB.admin {
         protected global::System.Web.UI.WebControls.DropDownList ddlDepartamento;
         
         /// <summary>
-        /// Control ddlEstado.
+        /// Control ddlGuardia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlGuardia;
         
         /// <summary>
         /// Control ddlArea.
@@ -85,13 +85,13 @@ namespace IncidentesWEB.admin {
         protected global::System.Web.UI.WebControls.DropDownList ddlRol;
         
         /// <summary>
-        /// Control ddlSistema.
+        /// Control ddlTiempoRol.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSistema;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTiempoRol;
         
         /// <summary>
         /// Control ddlTiempoCompania.
@@ -146,6 +146,33 @@ namespace IncidentesWEB.admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCausaInmediata;
+        
+        /// <summary>
+        /// Control ddlTecnologia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTecnologia;
+        
+        /// <summary>
+        /// Control ddlSistema.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSistema;
+        
+        /// <summary>
+        /// Control ddlEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
         
         /// <summary>
         /// Control ckbInicio.

@@ -21,7 +21,7 @@
             <div id="header">
                 <div id="top_nav">
                     <div id="logo_home">
-                        <a href="../default.aspx"></a>
+                        <a href="../default.aspxIncidentes/default.aspx"></a>
                     </div>
                     <div id="top_menu">
                         <!-- #include virtual="../include/menu_top.inc.aspx" -->

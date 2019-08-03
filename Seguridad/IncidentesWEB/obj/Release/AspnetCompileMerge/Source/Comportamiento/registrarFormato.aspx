@@ -34,13 +34,16 @@
                 <ContentTemplate>
                     <table>
                         <tr>
-                            <td align="right" width="75">&nbsp;</td>
+                            <td align="right" width="75">Departamento:</td>
                             <td>
-                                &nbsp;</td>
+                                <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="True" CssClass="form_row" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged" Width="200px">
+                                </asp:DropDownList>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlDepartamento" Display="Dynamic" ErrorMessage="*" Font-Size="X-Large" InitialValue="0"></asp:RequiredFieldValidator>
+                            </td>
                             <td>Formato:</td>
                             <td>
 
-                                <asp:DropDownList ID="ddlSector" runat="server" AutoPostBack="True" CssClass="form_row" Width="200px" OnSelectedIndexChanged="ddlFormato_SelectedIndexChanged">
+                                <asp:DropDownList ID="ddlFormato" runat="server" AutoPostBack="True" CssClass="form_row" Width="200px" OnSelectedIndexChanged="ddlFormato_SelectedIndexChanged">
                                 </asp:DropDownList>
 
                             </td>

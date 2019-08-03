@@ -88,16 +88,23 @@ C:\ProyMondelez\Seguridad\IncidentesBL\bin\Debug\IncidentesBE.pdb
 C:\ProyMondelez\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.csprojResolveAssemblyReference.cache
 C:\ProyMondelez\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.dll
 C:\ProyMondelez\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.pdb
-C:\ProyMondelez\Seguridad\IncidentesBL\bin\Debug\log4net.dll
-C:\ProyMondelez\Seguridad\IncidentesBL\bin\Debug\log4net.xml
-C:\instal\Seguridad\IncidentesBL\bin\Debug\IncidentesBL.dll
-C:\instal\Seguridad\IncidentesBL\bin\Debug\IncidentesBL.pdb
-C:\instal\Seguridad\IncidentesBL\bin\Debug\IncidentesADO.dll
-C:\instal\Seguridad\IncidentesBL\bin\Debug\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesBL\bin\Debug\log4net.dll
-C:\instal\Seguridad\IncidentesBL\bin\Debug\IncidentesADO.pdb
-C:\instal\Seguridad\IncidentesBL\bin\Debug\IncidentesBE.pdb
-C:\instal\Seguridad\IncidentesBL\bin\Debug\log4net.xml
-C:\instal\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.csprojResolveAssemblyReference.cache
-C:\instal\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.dll
-C:\instal\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.pdb
+C:\Mondel\Seguridad\IncidentesBL\bin\Debug\IncidentesBL.dll
+C:\Mondel\Seguridad\IncidentesBL\bin\Debug\IncidentesBL.pdb
+C:\Mondel\Seguridad\IncidentesBL\bin\Debug\IncidentesADO.dll
+C:\Mondel\Seguridad\IncidentesBL\bin\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad\IncidentesBL\bin\Debug\IncidentesADO.pdb
+C:\Mondel\Seguridad\IncidentesBL\bin\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.dll
+C:\Mondel\Seguridad\IncidentesBL\obj\Debug\IncidentesBL.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\obj\Debug\IncidentesBL.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\obj\Debug\IncidentesBL.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\obj\Debug\IncidentesBL.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\IncidentesBL.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\IncidentesBL.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\IncidentesADO.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\IncidentesADO.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\log4net.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesBL\bin\Debug\log4net.xml

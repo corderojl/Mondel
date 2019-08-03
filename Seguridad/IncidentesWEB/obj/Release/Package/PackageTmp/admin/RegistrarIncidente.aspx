@@ -62,15 +62,15 @@
                 <ContentTemplate>
                     <table>
                         <tr>
-                            <td align="right" width="80">Área de ocurrencia:</td>
+                            <td align="right" width="80">Área:</td>
                             <td width="180">
                                 <asp:DropDownList ID="ddlDepartamento" runat="server" CssClass="form_row" AutoPostBack="True" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" Display="Dynamic" ControlToValidate="ddlDepartamento" InitialValue="0" Font-Size="X-Large"></asp:RequiredFieldValidator>
                             </td>
-                            <td align="right" width="80"></td>
+                            <td align="right" width="80">Responsable:</td>
                             <td width="300">
-                                <asp:Label ID="lblResponsable" runat="server" CssClass="form_lab" Visible="False"></asp:Label>
+                                <asp:Label ID="lblResponsable" runat="server" CssClass="form_lab"></asp:Label>
                             </td>
                         </tr>
                     </table>

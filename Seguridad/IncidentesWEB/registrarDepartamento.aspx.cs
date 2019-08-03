@@ -13,8 +13,7 @@ namespace IncidentesWEB.Comportamiento
     {
         TB_DepartamentoBL _TB_DepartamentoBL = new TB_DepartamentoBL();
         TB_DepartamentoBE _TB_DepartamentoBE = new TB_DepartamentoBE();
-        TB_SectorBL _TB_SectorBL = new TB_SectorBL(); 
-      
+        List<TB_DepartamentoBE> lTTB_DepartamentoBE;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,22 +26,13 @@ namespace IncidentesWEB.Comportamiento
             {
                 GenerarTabla();
                 lblMensaje.Text = "";
-                llenarComboSector();
-                
             }
-        }
-
-        private void llenarComboSector()
-        {
-            ddlSector.DataSource = _TB_SectorBL.ListarTB_SectorO_Act();
-            ddlSector.DataValueField = "Sector_id";
-            ddlSector.DataTextField = "Sector_desc";
-            ddlSector.DataBind();
-            ddlSector.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
         }
         private void GenerarTabla()
         {
-            rpEmpleado.DataSource = _TB_DepartamentoBL.ListarTB_DepartamentoBySector();
+
+            lTTB_DepartamentoBE = _TB_DepartamentoBL.ListarTB_DepartamentoO_Act("1");
+            rpEmpleado.DataSource = lTTB_DepartamentoBE;
             rpEmpleado.DataBind();
         }
 
@@ -94,15 +84,15 @@ namespace IncidentesWEB.Comportamiento
                 int status;
                 var _miObj = _TB_DepartamentoBE;
                 //_miempl.Emp_id = "";
-                _miObj.Departamento_desc = txtDepartemento.Text;
+                _miObj.Departamento_desc = txtSubCategoria.Text;
                 _miObj.Sigla=txtSsiglas.Text;
-                _miObj.Sector_id =short.Parse(ddlSector.SelectedValue);
+                
 
                 int vexito = _TB_DepartamentoBL.InsertarTB_Departamento(_TB_DepartamentoBE);
                 if (vexito != 0)
                 {
                     GenerarTabla();
-                    txtDepartemento.Text = "";
+                    txtSubCategoria.Text = "";
                     txtSsiglas.Text="";
                 }
                 else

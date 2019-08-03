@@ -45,10 +45,16 @@ C:\ProyMon\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
 D:\Mondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
 C:\ProyMondelez\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.dll
 C:\ProyMondelez\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\ProyMondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
 C:\ProyMondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
 C:\ProyMondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
-C:\ProyMondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
-C:\instal\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.pdb
-C:\instal\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad - copia (2)\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesBE\obj\Debug\IncidentesBE.pdb

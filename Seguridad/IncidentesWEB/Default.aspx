@@ -208,8 +208,8 @@
                         <div id="accordion-1" class="accordion-section-content" style="display: none;">
                             <ul id="navi">
                                 <li><a href="admin/">Sistema de Registro HSE</a></li>
-                                 <li><a href="Comportamiento/">Sistema de Comportamiento & Cultura</a></li>
-                             <!--  <li><a href="Trigger/">Reporte de Trigger de HS&E</a></li>
+                                <!--  <li><a href="Comportamiento/">Sistema de Comportamiento & Cultura</a></li>
+                              <li><a href="Trigger/">Reporte de Trigger de HS&E</a></li>
                                 <li><a href="Auditoria/">Auditorias</a></li>
                                 <li><a href="ReporteSLT.aspx">Scorecard</a></li>-->
                             </ul>

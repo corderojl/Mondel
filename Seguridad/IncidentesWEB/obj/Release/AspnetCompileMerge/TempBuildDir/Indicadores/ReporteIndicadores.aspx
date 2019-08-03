@@ -17,13 +17,6 @@
     <link href="Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery.ui.datepicker.js" type="text/javascript"></script>
     <script type="text/javascript">
-    var popUpWin = 0;
-        function PopUp(URLStr, left, top, width, height) {
-            if (popUpWin) {
-                if (!popUpWin.closed) popUpWin.close();
-            }
-            popUpWin = open(URLStr, 'popUpWindows', 'scrollbars=yes,location=no,directories=no,status=no,menubar=no,resizable=no,copyhistory=yes');
-        }
         $(function () {
             $("#ctl00_admin_cph_content_txtFecha").datepicker();
             $("#ctl00_admin_cph_content_txtFecha0").datepicker();
@@ -188,7 +181,6 @@
                     <td>
                         <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" CssClass="botonB" />
                         <asp:Button ID="btnExportar" runat="server" Text="Exportar" OnClick="btnExportar_Click" CssClass="botonX" />
-                        <asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" Text="Imprimir" CssClass="botonPrint" />
                     </td>
                 </tr>
             </table>

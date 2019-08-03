@@ -3,8 +3,3 @@ C:\ProyMondelez\Seguridad\IncidentesBE\bin\Release\IncidentesBE.pdb
 C:\ProyMondelez\Seguridad\IncidentesBE\obj\Release\IncidentesBE.csprojResolveAssemblyReference.cache
 C:\ProyMondelez\Seguridad\IncidentesBE\obj\Release\IncidentesBE.dll
 C:\ProyMondelez\Seguridad\IncidentesBE\obj\Release\IncidentesBE.pdb
-C:\instal\Seguridad\IncidentesBE\bin\Release\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesBE\bin\Release\IncidentesBE.pdb
-C:\instal\Seguridad\IncidentesBE\obj\Release\IncidentesBE.csprojResolveAssemblyReference.cache
-C:\instal\Seguridad\IncidentesBE\obj\Release\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesBE\obj\Release\IncidentesBE.pdb

@@ -21,7 +21,7 @@ namespace IncidentesWEB.admin
         TB_IncidentesBL _TB_IncidentesBL = new TB_IncidentesBL();
         TB_DepartamentoBL _TB_DepartamentoBL = new TB_DepartamentoBL();
         TB_ClasificacionBL _TB_ClasificacionBL = new TB_ClasificacionBL();
-
+        TB_GuardiaBL _TB_GuardiaBL = new TB_GuardiaBL();
         TB_AreaBL _TB_AreaBL = new TB_AreaBL();
         TB_RolBL _TB_RolBL = new TB_RolBL();
         TB_ContratistaBL _TB_ContratistaBL = new TB_ContratistaBL();
@@ -30,6 +30,7 @@ namespace IncidentesWEB.admin
         TB_EquipoAfectadoBL _TB_EquipoAfectadoBL = new TB_EquipoAfectadoBL();
         TB_CausaInmediataBL _TB_CausaInmediataBL = new TB_CausaInmediataBL();
         TB_RiesgoInvolucradoBL _TB_RiesgoIvolucradoBL = new TB_RiesgoInvolucradoBL();
+        TB_TecnologiaBL _TB_TecnologiaBL = new TB_TecnologiaBL();
         TB_CondicionInvolucradaBL _TB_CondicionInvolucradaBL = new TB_CondicionInvolucradaBL();
         TB_ElementoClaveBL _TB_ElementoClaveBL = new TB_ElementoClaveBL();
 
@@ -38,9 +39,11 @@ namespace IncidentesWEB.admin
         List<TB_EstatusOperacionalBE> lTTB_EstatusOperacionalBE;
         List<TB_ClasificacionBE> lTTB_ClasificacionBE;
 
+        List<TB_GuardiaBE> lTTB_GuardiaBE;
         List<TB_RolBE> lTTB_RolBE;
         List<TB_ElementoClaveBE> lTTB_SistemaBE;
         List<TB_CausaInmediataBE> lTTB_CausaInmediataBE;
+        List<TB_TecnologiaBE> lTTB_TecnologiaBE;
         List<TB_CondicionInvolucradaBE> lTTB_CondicionInvolucradaBE;
         List<TB_RiesgoInvolucradoBE> lTTB_RiesgoInvolucradoBE;
 
@@ -66,12 +69,14 @@ namespace IncidentesWEB.admin
                 txtFecha2.Text = fecha_actual;
                 LlenarComboDepartamento();
                 ddlDepartamento.SelectedValue = ((Fnc_FuncionariosBE)Session["Fnc_Funcionarios"]).Area_Id.ToString();
+                LlenarComboGuardia();
                 LlenarComboArea();
                 LlenarComboClasificacion();
                 LlenarComboRol();
                 LlenarComboEstatusOperacional();
                 LlenarComboComportamientoInvolucrado();
                 LlenarComboCausaInmediata();
+                LlenarComboTecnologia();
                 LlenarComboElementoCLave();
                 LlenarComboCondicionInvolucrada();
             }
@@ -85,7 +90,15 @@ namespace IncidentesWEB.admin
             ddlDepartamento.DataBind();
             ddlDepartamento.Items.Insert(0, new ListItem("(Todos)", "%%"));
         }
-
+        private void LlenarComboGuardia()
+        {
+            lTTB_GuardiaBE = _TB_GuardiaBL.ListarTB_GuardiaO_Act();
+            ddlGuardia.DataSource = lTTB_GuardiaBE;
+            ddlGuardia.DataValueField = "Guardia_id";
+            ddlGuardia.DataTextField = "Guardia_desc";
+            ddlGuardia.DataBind();
+            ddlGuardia.Items.Insert(0, new ListItem("(Todos)", "%%"));
+        }
         private void LlenarComboArea()
         {
             lTTB_AreaBE = _TB_AreaBL.ListarTB_AreaO_Act();
@@ -149,7 +162,15 @@ namespace IncidentesWEB.admin
             ddlCausaInmediata.DataBind();
             ddlCausaInmediata.Items.Insert(0, new ListItem("(Todos)", "%%"));
         }
-
+        private void LlenarComboTecnologia()
+        {
+            lTTB_TecnologiaBE = _TB_TecnologiaBL.ListarTB_TecnologiaO_Act();
+            ddlTecnologia.DataSource = lTTB_TecnologiaBE;
+            ddlTecnologia.DataValueField = "Tecnologia_id";
+            ddlTecnologia.DataTextField = "Tecnologia_desc";
+            ddlTecnologia.DataBind();
+            ddlTecnologia.Items.Insert(0, new ListItem("(Todos)", "%%"));
+        }
         private void LlenarComboElementoCLave()
         {
             lTTB_SistemaBE = _TB_ElementoClaveBL.ListarTB_ElementoClaveO_Act();
@@ -159,6 +180,24 @@ namespace IncidentesWEB.admin
             ddlSistema.DataBind();
             ddlSistema.Items.Insert(0, new ListItem("(Todos)", "%%"));
         }
+        //private void LlenarComboParteCuerpo()
+        //{
+        //    lTTB_ParteCuerpoBE = _TB_ParteCuerpoBL.ListarTB_ParteCuerpoO_Act();
+        //    ddlParteCuerpo.DataSource = lTTB_ParteCuerpoBE;
+        //    ddlParteCuerpo.DataValueField = "ParteCuerpo_id";
+        //    ddlParteCuerpo.DataTextField = "ParteCuerpo_desc";
+        //    ddlParteCuerpo.DataBind();
+        //    ddlParteCuerpo.Items.Insert(0, new ListItem("(Todos)", "%%"));
+        //}
+        //private void LlenarComboEquipoAfectado()
+        //{
+        //    lTTB_EquipoAfectadoBE = _TB_EquipoAfectadoBL.ListarTB_EquipoAfectadoO_Act();
+        //    ddlEquipoAfectado.DataSource = lTTB_EquipoAfectadoBE;
+        //    ddlEquipoAfectado.DataValueField = "EquipoAfectado_id";
+        //    ddlEquipoAfectado.DataTextField = "EquipoAfectado_desc";
+        //    ddlEquipoAfectado.DataBind();
+        //    ddlEquipoAfectado.Items.Insert(0, new ListItem("(Todos)", "%%"));
+        //}
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -170,19 +209,19 @@ namespace IncidentesWEB.admin
             DateTime _Fecha_incidente, _Fecha_incidente1;
             int _Usuario_id;
             _Departamento_id = ddlDepartamento.SelectedValue;
-            _Guardia_id = "%%";
+            _Guardia_id = ddlGuardia.SelectedValue;
             _Area_id = ddlArea.SelectedValue;
             _Clasificacion_id = ddlClasificacion.SelectedValue;
             _Tipo_emp = ddlTipoPersonal.SelectedValue;
             _Rol_id = ddlRol.SelectedValue;
-            _Rol_tiempo = "%%";
+            _Rol_tiempo = ddlTiempoRol.SelectedValue;
             _Compania_tiempo = ddlTiempoCompania.SelectedValue;
             _Turno = ddlTurno.SelectedValue;
             _Estatus_ope = ddlEstatusOperacional.SelectedValue;
             _Comportamiento_inv_id = ddlComportamientoInv.SelectedValue;
             _Condicion_inv_id = ddlCondicionInv.SelectedValue;
             _CausaInmediata_id = ddlCausaInmediata.SelectedValue;
-            _Tecnologia_id = "%%";
+            _Tecnologia_id = ddlTecnologia.SelectedValue;
             _ElementoClave_id = ddlSistema.SelectedValue;
             _Estado = ddlEstado.SelectedValue;
 
@@ -313,19 +352,19 @@ namespace IncidentesWEB.admin
             DateTime _Fecha_incidente, _Fecha_incidente1;
             int _Usuario_id;
             _Departamento_id = ddlDepartamento.SelectedValue;
-            _Guardia_id = "%%";
+            _Guardia_id = ddlGuardia.SelectedValue;
             _Area_id = ddlArea.SelectedValue;
             _Clasificacion_id = ddlClasificacion.SelectedValue;
             _Tipo_emp = ddlTipoPersonal.SelectedValue;
             _Rol_id = ddlRol.SelectedValue;
-            _Rol_tiempo = "%%";
+            _Rol_tiempo = ddlTiempoRol.SelectedValue;
             _Compania_tiempo = ddlTiempoCompania.SelectedValue;
             _Turno = ddlTurno.SelectedValue;
             _Estatus_ope = ddlEstatusOperacional.SelectedValue;
             _Comportamiento_inv_id = ddlComportamientoInv.SelectedValue;
             _Condicion_inv_id = ddlCondicionInv.SelectedValue;
             _CausaInmediata_id = ddlCausaInmediata.SelectedValue;
-            _Tecnologia_id = "%%";
+            _Tecnologia_id = ddlTecnologia.SelectedValue;
             _ElementoClave_id = ddlSistema.SelectedValue;
             _Estado = ddlEstado.SelectedValue;
 

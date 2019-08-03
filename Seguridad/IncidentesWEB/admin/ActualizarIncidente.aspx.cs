@@ -205,7 +205,7 @@ namespace IncidentesWEB.admin
             ddlCausaInmediata.DataValueField = "Causainmediata_id";
             ddlCausaInmediata.DataTextField = "Causainmediata_desc";
             ddlCausaInmediata.DataBind();
-            ddlCausaInmediata.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
+            ddlClasificacion.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
             ddlCausaInmediata.SelectedValue = "0";
 
         }
@@ -298,8 +298,7 @@ namespace IncidentesWEB.admin
         {
             DataTable Resultados = _TB_PlanAccionBL.BuscarTB_PlanAccionByIncidenteResponsable(_Incidente_id, 2, 1);
             StringBuilder Tabla = new StringBuilder();
-            DateTime hoy = DateTime.Now;
-            DateTime fecha;
+
             string _PlanAccion_id;
 
             int TotalRegistros = Resultados.Rows.Count;
@@ -312,7 +311,7 @@ namespace IncidentesWEB.admin
 
             for (int i = 0; i < TotalRegistros; i++)
             {
-                fecha = Convert.ToDateTime(Resultados.Rows[i]["fecha"]);
+
                 _PlanAccion_id = Resultados.Rows[i]["PlanAccion_id"].ToString();
                 Tabla.AppendLine("<tr>");
                 Tabla.Append("<td>" + "<a href=\"#\" onClick=\"PopUp('ActualizarPlanAccion.aspx?PlanAccion_id=" + _PlanAccion_id + "&Registro_id=" + _Incidente_id + "&Sistema_id=1',20,20,800,400); return false;\"> Editar </a></td>");
@@ -321,14 +320,11 @@ namespace IncidentesWEB.admin
                 Tabla.Append("<td>" + Resultados.Rows[i]["Funcionario_nome"].ToString() + "</td>");
                 if (Convert.ToBoolean(Convert.ToByte(Resultados.Rows[i]["Estado"])) == true)
                 {
-                    Tabla.Append("<td style='color: green;'>Cumplido</td>");
+                    Tabla.Append("<td>Cumplido</td>");
                 }
                 else
                 {
-                    if (fecha > hoy)
-                        Tabla.Append("<td style='color: orange;'>En Fecha</td>");
-                    else
-                        Tabla.Append("<td style='color: red;'>Pendiente</td>");
+                    Tabla.Append("<td style='color: red;'>No cumplido</td>");
                 }
                 Tabla.Append("<td>" + Resultados.Rows[i]["fecha"] + "</td>");
                 Tabla.Append(Environment.NewLine);
@@ -347,36 +343,31 @@ namespace IncidentesWEB.admin
             StringBuilder Tabla = new StringBuilder();
 
             string _PlanAccion_id;
-            DateTime hoy = DateTime.Now;
-            DateTime fecha;
 
             int TotalRegistros = Resultados.Rows.Count;
             Tabla.AppendLine("<h2>Plan Inmediato:</h2>");
             Tabla.AppendLine("<table class=\"lista_table\">");
             Tabla.AppendLine("<thead>");
-            Tabla.AppendLine("<th><a href=\"#\" onClick=\"PopUp('RegistrarPlanAccion.aspx?tipoPlan=1&Registro_id=" + _Incidente_id + "&Sistema_id=1&Titulo=" + _Titulo + "',20,20,800,400); return false;\">Agregar</th><th> ID </th><th> PLAN </th><th> RESPONSABLE </th><th> ESTADO </th><th> FECHA ESTIMADA </th>");
+            Tabla.AppendLine("<th><a href=\"#\" onClick=\"PopUp('RegistrarPlanAccion.aspx?tipoPlan=1&Registro_id=" + _Incidente_id + "&Sistema_id=1',20,20,800,400); return false;\">Agregar</th><th> ID </th><th> PLAN </th><th> RESPONSABLE </th><th> ESTADO </th><th> FECHA ESTIMADA </th>");
             Tabla.AppendLine("</thead>");
             Tabla.AppendLine("<tbody>");
 
             for (int i = 0; i < TotalRegistros; i++)
             {
-                fecha = Convert.ToDateTime(Resultados.Rows[i]["fecha"]);
+
                 _PlanAccion_id = Resultados.Rows[i]["PlanAccion_id"].ToString();
                 Tabla.AppendLine("<tr>");
-                Tabla.Append("<td>" + "<a href=\"#\" onClick=\"PopUp('ActualizarPlanAccion.aspx?PlanAccion_id=" + _PlanAccion_id + "&Registro_id=" + _Incidente_id + "&Sistema_id=1&Titulo=" + _Titulo + "',20,20,800,400); return false;\"> Editar </a></td>");
+                Tabla.Append("<td>" + "<a href=\"#\" onClick=\"PopUp('ActualizarPlanAccion.aspx?PlanAccion_id=" + _PlanAccion_id + "&Registro_id=" + _Incidente_id + "&Sistema_id=1',20,20,800,400); return false;\"> Editar </a></td>");
                 Tabla.Append("<td>" + _PlanAccion_id + "</td>");
                 Tabla.Append("<td align=\"left\">" + Resultados.Rows[i]["PlanAccion_desc"].ToString() + "</td>");
                 Tabla.Append("<td>" + Resultados.Rows[i]["Funcionario_nome"].ToString() + "</td>");
                 if (Convert.ToBoolean(Convert.ToByte(Resultados.Rows[i]["Estado"])) == true)
                 {
-                    Tabla.Append("<td style='color: green;'>Cumplido</td>");
+                    Tabla.Append("<td>Cumplido</td>");
                 }
                 else
                 {
-                    if (fecha > hoy)
-                        Tabla.Append("<td style='color: orange;'>En Fecha</td>");
-                    else
-                        Tabla.Append("<td style='color: red;'>Pendiente</td>");
+                    Tabla.Append("<td style='color: red;'>No cumplido</td>");
                 }
                 Tabla.Append("<td>" + Resultados.Rows[i]["fecha"] + "</td>");
                 Tabla.Append(Environment.NewLine);
@@ -392,7 +383,7 @@ namespace IncidentesWEB.admin
 
         protected void ddlClasificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (int.Parse(ddlClasificacion.SelectedValue) == 9 || int.Parse(ddlClasificacion.SelectedValue) == 10)
+            if (int.Parse(ddlClasificacion.SelectedValue) == 9)
             {
                 ddlEmpleado.SelectedValue = "0";
                 ddlEmpleado.Enabled = true;

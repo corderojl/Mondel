@@ -102,7 +102,7 @@ namespace IncidentesWEB.admin
                         rblEstado.SelectedValue = "2";
                     else
                         rblEstado.SelectedValue = _TB_IncidentesBE.Estado.ToString();
-
+                    
                     LlenarComboDepartamento("1");
                     LlenarComboArea();
                     LlenarComboEstatusOperacional();
@@ -116,7 +116,7 @@ namespace IncidentesWEB.admin
                     LlenarComboCondicionInvolucrada();
                     LlenarComboRiesgoInvolucrado();
                     LlenarComboEmpleado();
-
+                    
                     GenerarTablaPlanInmediato(_Incidente_id, txtTitulo.Text);
                     GenerarTablaPlanSistemico(_Incidente_id, txtTitulo.Text);
                     ddlDepartamento.SelectedValue = _TB_IncidentesBE.Departamento.ToString();
@@ -161,7 +161,7 @@ namespace IncidentesWEB.admin
             ddlComportamientoInvolucrado.DataTextField = "Riesgo_inv_desc";
             ddlComportamientoInvolucrado.DataBind();
             ddlComportamientoInvolucrado.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
-
+            
         }
 
         private void LlenarComboCondicionInvolucrada()
@@ -171,7 +171,7 @@ namespace IncidentesWEB.admin
             ddlCondicionaInvolucrado.DataValueField = "Condicion_inv_id";
             ddlCondicionaInvolucrado.DataTextField = "Condicion_inv_desc";
             ddlCondicionaInvolucrado.DataBind();
-            ddlCondicionaInvolucrado.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
+            ddlCondicionaInvolucrado.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));            
         }
 
 
@@ -183,7 +183,7 @@ namespace IncidentesWEB.admin
             ddlSistema.DataTextField = "ElementoClave_desc";
             ddlSistema.DataBind();
             ddlSistema.Items.Insert(0, new ListItem("Elija una Opcion..", "0"));
-
+           
         }
 
         private void LlenarComboContratista()
@@ -222,7 +222,7 @@ namespace IncidentesWEB.admin
         }
         private void LlenarComboDepartamento(string Sistema_id)
         {
-            ddlDepartamento.DataSource = _TB_DepartamentoBL.ListarTB_Departamento_All(Sistema_id);
+            ddlDepartamento.DataSource = _TB_DepartamentoBL.ListarTB_Departamento_All(Sistema_id); 
             ddlDepartamento.DataValueField = "Departamento_id";
             ddlDepartamento.DataTextField = "Departamento_desc";
             ddlDepartamento.DataBind();
@@ -240,7 +240,7 @@ namespace IncidentesWEB.admin
         }
         private void LlenarComboClasificacion()
         {
-
+            
             ddlClasificacion.DataSource = _TB_ClasificacionBL.ListarTB_Clasificacion_All(); ;
             ddlClasificacion.DataValueField = "Clasificacion_id";
             ddlClasificacion.DataTextField = "Clasificacion_desc";
@@ -307,11 +307,11 @@ namespace IncidentesWEB.admin
                 _mietq_etiqueta.Condicion_inv_id = Convert.ToInt16(ddlCondicionaInvolucrado.SelectedValue);
                 _mietq_etiqueta.ElementoClave_id = Convert.ToInt16(ddlSistema.SelectedValue);
                 _mietq_etiqueta.Estado = Convert.ToInt16(rblEstado.SelectedValue);
-
+               
 
                 if (rblEstado.SelectedValue == "3")
                 {
-                    if (_TB_PlanAccionBL.ContarTB_PlanAccionByRegistro(int.Parse(lblIncidente_id.Text), 1) > 0)
+                    if (_TB_PlanAccionBL.ContarTB_PlanAccionByRegistro(int.Parse(lblIncidente_id.Text),1) > 0)
                     {
                         String mensaje = "<script language='JavaScript'>window.alert('No puede cerrar Incidente si existe Planes pendientes');";
                         mensaje += Environment.NewLine;
@@ -391,8 +391,7 @@ namespace IncidentesWEB.admin
         {
             DataTable Resultados = _TB_PlanAccionBL.BuscarTB_PlanAccionByIncidenteResponsable(_Incidente_id, 2, 1);
             StringBuilder Tabla = new StringBuilder();
-            DateTime hoy = DateTime.Now;
-            DateTime fecha;
+
             string _PlanAccion_id;
 
             int TotalRegistros = Resultados.Rows.Count;
@@ -405,7 +404,7 @@ namespace IncidentesWEB.admin
 
             for (int i = 0; i < TotalRegistros; i++)
             {
-                fecha = Convert.ToDateTime(Resultados.Rows[i]["fecha"]);
+
                 _PlanAccion_id = Resultados.Rows[i]["PlanAccion_id"].ToString();
                 Tabla.AppendLine("<tr>");
                 Tabla.Append("<td>" + "<a href=\"#\" onClick=\"PopUp('ActualizarPlanAccion.aspx?PlanAccion_id=" + _PlanAccion_id + "&Registro_id=" + _Incidente_id + "&Sistema_id=1',20,20,800,400); return false;\"> Editar </a></td>");
@@ -414,14 +413,11 @@ namespace IncidentesWEB.admin
                 Tabla.Append("<td>" + Resultados.Rows[i]["Funcionario_nome"].ToString() + "</td>");
                 if (Convert.ToBoolean(Convert.ToByte(Resultados.Rows[i]["Estado"])) == true)
                 {
-                    Tabla.Append("<td style='color: green;'>Cumplido</td>");
+                    Tabla.Append("<td>Cumplido</td>");
                 }
                 else
                 {
-                    if (fecha > hoy)
-                        Tabla.Append("<td style='color: orange;'>En Fecha</td>");                        
-                    else
-                        Tabla.Append("<td style='color: red;'>Pendiente</td>");
+                    Tabla.Append("<td style='color: red;'>No cumplido</td>");
                 }
                 Tabla.Append("<td>" + Resultados.Rows[i]["fecha"] + "</td>");
                 Tabla.Append(Environment.NewLine);
@@ -440,8 +436,6 @@ namespace IncidentesWEB.admin
             StringBuilder Tabla = new StringBuilder();
 
             string _PlanAccion_id;
-            DateTime hoy = DateTime.Now;
-            DateTime fecha;
 
             int TotalRegistros = Resultados.Rows.Count;
             Tabla.AppendLine("<h2>Plan Inmediato:</h2>");
@@ -453,7 +447,7 @@ namespace IncidentesWEB.admin
 
             for (int i = 0; i < TotalRegistros; i++)
             {
-                fecha = Convert.ToDateTime(Resultados.Rows[i]["fecha"]);
+
                 _PlanAccion_id = Resultados.Rows[i]["PlanAccion_id"].ToString();
                 Tabla.AppendLine("<tr>");
                 Tabla.Append("<td>" + "<a href=\"#\" onClick=\"PopUp('ActualizarPlanAccion.aspx?PlanAccion_id=" + _PlanAccion_id + "&Registro_id=" + _Incidente_id + "&Sistema_id=1&Titulo=" + _Titulo + "',20,20,800,400); return false;\"> Editar </a></td>");
@@ -462,14 +456,11 @@ namespace IncidentesWEB.admin
                 Tabla.Append("<td>" + Resultados.Rows[i]["Funcionario_nome"].ToString() + "</td>");
                 if (Convert.ToBoolean(Convert.ToByte(Resultados.Rows[i]["Estado"])) == true)
                 {
-                    Tabla.Append("<td style='color: green;'>Cumplido</td>");
+                    Tabla.Append("<td>Cumplido</td>");
                 }
                 else
                 {
-                    if (fecha > hoy)
-                        Tabla.Append("<td style='color: orange;'>En Fecha</td>");
-                    else
-                        Tabla.Append("<td style='color: red;'>Pendiente</td>");
+                    Tabla.Append("<td style='color: red;'>No cumplido</td>");
                 }
                 Tabla.Append("<td>" + Resultados.Rows[i]["fecha"] + "</td>");
                 Tabla.Append(Environment.NewLine);
@@ -491,7 +482,7 @@ namespace IncidentesWEB.admin
 
         protected void ddlClasificacion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (int.Parse(ddlClasificacion.SelectedValue) == 9 || int.Parse(ddlClasificacion.SelectedValue) == 10)
+            if (int.Parse(ddlClasificacion.SelectedValue) == 9)
             {
                 ddlEmpleado.SelectedValue = "0";
                 ddlEmpleado.Enabled = true;

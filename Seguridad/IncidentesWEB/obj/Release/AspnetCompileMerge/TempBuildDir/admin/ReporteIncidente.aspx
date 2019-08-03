@@ -71,13 +71,9 @@
                                 <asp:DropDownList ID="ddlDepartamento" runat="server">
                                 </asp:DropDownList>
                             </td>
-                            <td>Estado:</td>
+                            <td>Guardia:</td>
                             <td>
-                                <asp:DropDownList ID="ddlEstado" runat="server">
-                                    <asp:ListItem Selected="True" Value="%%">(Todos)</asp:ListItem>
-                                    <asp:ListItem Value="1">Reportado</asp:ListItem>
-                                    <asp:ListItem Value="2">Investigado</asp:ListItem>
-                                    <asp:ListItem Value="3">Solucionado</asp:ListItem>
+                                <asp:DropDownList ID="ddlGuardia" runat="server">
                                 </asp:DropDownList>
                             </td>
                             <td>Localizacion:</td>
@@ -100,7 +96,7 @@
                             <td>
                                 <asp:DropDownList ID="ddlTipoPersonal" runat="server">
                                     <asp:ListItem Selected="True" Value="%%">(Todos)</asp:ListItem>
-                                    <asp:ListItem Value="1">Mondelez</asp:ListItem>
+                                    <asp:ListItem Value="1">PG</asp:ListItem>
                                     <asp:ListItem Value="2">Contratista</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
@@ -111,9 +107,17 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Work Process:</td>
+                            <td>Tiempo en el Rol:</td>
                             <td>
-                                <asp:DropDownList ID="ddlSistema" runat="server">
+                                <asp:DropDownList ID="ddlTiempoRol" runat="server">
+                                    <asp:ListItem Selected="True" Value="%%">(Todos)</asp:ListItem>
+                                    <asp:ListItem Value="1">0-3 Semana</asp:ListItem>
+                                    <asp:ListItem Value="3 ">1-5 Meses</asp:ListItem>
+                                    <asp:ListItem Value="4">6-11 Meses</asp:ListItem>
+                                    <asp:ListItem Value="5">1-4 Años</asp:ListItem>
+                                    <asp:ListItem Value="6">5-9 Años</asp:ListItem>
+                                    <asp:ListItem Value="7">10-19 Años</asp:ListItem>
+                                    <asp:ListItem Value="8">20+ Años</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                             <td>Tiempo en la Comp:</td>
@@ -166,15 +170,33 @@
                                 <asp:DropDownList ID="ddlCausaInmediata" runat="server">
                                 </asp:DropDownList>
                             </td>
-                            <td>&nbsp;</td>
+                            <td>Tecnología:</td>
                             <td>
-                                &nbsp;</td>
-                            <td>&nbsp;</td>
+                                <asp:DropDownList ID="ddlTecnologia" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                            <td>Sistema:</td>
                             <td>
 
-                                &nbsp;</td>
+                                <asp:DropDownList ID="ddlSistema" runat="server">
+                                </asp:DropDownList>
+                            </td>
                         </tr>
-                        
+                        <tr>
+                            <td>Estado:</td>
+                            <td>
+                                <asp:DropDownList ID="ddlEstado" runat="server">
+                                    <asp:ListItem Selected="True" Value="%%">(Todos)</asp:ListItem>
+                                    <asp:ListItem Value="1">Reportado</asp:ListItem>
+                                    <asp:ListItem Value="2">Investigado</asp:ListItem>
+                                    <asp:ListItem Value="3">Solucionado</asp:ListItem>
+                                </asp:DropDownList>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
                     </table>
                 </ContentTemplate>
             </asp:UpdatePanel>

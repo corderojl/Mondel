@@ -30,9 +30,8 @@
                                             <th tyle="width: 5%;">Código</th>
                                             <th style="display:none">Id</th>
                                             <th tyle="width: 50%;">Descripcion</th>
-                                            <th tyle="width: 10%;">Siglas</th>
-                                            <th tyle="width: 25%;">Zona</th>
-                                            <th tyle="width: 5%;">Operaciones</th>
+                                            <th tyle="width: 20%;">Siglas</th>
+                                            <th>Operaciones</th>
                                         </tr>
                                             </thead>
                                 </HeaderTemplate>
@@ -40,22 +39,21 @@
                                     <tbody>
                                     <tr>
                                         <td style="display:none">
-                                            <asp:Label ID="lblSubCategoria_id" Text='<%# DataBinder.Eval(Container.DataItem, "Departamento_id") %>' runat="server" />
+                                            <asp:Label ID="lblSubCategoria_id" Text="<%#((TB_DepartamentoBE)Container.DataItem).Departamento_id%>" runat="server" />
                                         </td>
                                         <td>
                                             <%# Container.ItemIndex +1%>
                                         </td>
                                         <td>
-                                           <%# DataBinder.Eval(Container.DataItem, "Departamento_Desc") %> 
+                                            <asp:TextBox ID="txtSubCategoria_desc" Text="<%#((TB_DepartamentoBE)Container.DataItem).Departamento_desc%>" Width="90%" runat="server" />
                                         </td>
                                         <td>
-                                             <%# DataBinder.Eval(Container.DataItem, "Sigla") %> 
+                                            <asp:TextBox ID="txtSiglas" Text="<%#((TB_DepartamentoBE)Container.DataItem).Sigla%>" Width="90%" runat="server" />
                                         </td>
-                              <td>
-                                             <%# DataBinder.Eval(Container.DataItem, "Sector_desc") %> 
                                         </td>
                                 <td style="text-align: center">
-                                   
+                                    <asp:ImageButton ID="ibnActualizar" ImageUrl="~/Comportamiento/Images/Guardar.png" Width="30" Height="30" ToolTip="Actualizar Empleado"
+                                        OnClientClick="return validarActualizar(this);" OnClick="ibnActualizar_Click" runat="server" />&nbsp;&nbsp;
                                     <asp:ImageButton ID="ibnEliminar" ImageUrl="~/Comportamiento/Images/btnEliminar.png" Width="30" Height="30" ToolTip="Eliminar Empleado"
                                         OnClientClick="return confirm('Seguro de eliminarlo');" OnClick="ibnEliminar_Click" runat="server" />
 
@@ -74,15 +72,14 @@
                                             
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="txtDepartemento" Width="90%" runat="server" />
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDepartemento" Display="Dynamic" ErrorMessage="*" Font-Size="X-Large" InitialValue=""></asp:RequiredFieldValidator>
+                                            <asp:TextBox ID="txtSubCategoria" Width="90%" runat="server" />
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSubCategoria" Display="Dynamic" ErrorMessage="*" Font-Size="X-Large" InitialValue=""></asp:RequiredFieldValidator>
                                         </td>
                                 <td>
                                             <asp:TextBox ID="txtSsiglas" Width="90%" runat="server" />
                                      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSsiglas" Display="Dynamic" ErrorMessage="*" Font-Size="X-Large" InitialValue=""></asp:RequiredFieldValidator>
                                         </td>
-                                <td>
-                                    <asp:DropDownList ID="ddlSector" runat="server"></asp:DropDownList><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" Display="Dynamic" ControlToValidate="ddlSector" InitialValue="0" Font-Size="X-Large"></asp:RequiredFieldValidator>
+
                                         </td>
                                 <td style="text-align: center">
                                     <asp:ImageButton ID="ibnGuardar" ImageUrl="~/Comportamiento/Images/btnGuardar.png" Width="30" Height="30" ToolTip="Agregar"

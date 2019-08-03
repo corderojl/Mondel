@@ -7,16 +7,3 @@ C:\ProyMondelez\Seguridad\IncidentesBL\bin\Release\IncidentesBE.pdb
 C:\ProyMondelez\Seguridad\IncidentesBL\obj\Release\IncidentesBL.csprojResolveAssemblyReference.cache
 C:\ProyMondelez\Seguridad\IncidentesBL\obj\Release\IncidentesBL.dll
 C:\ProyMondelez\Seguridad\IncidentesBL\obj\Release\IncidentesBL.pdb
-C:\ProyMondelez\Seguridad\IncidentesBL\bin\Release\log4net.dll
-C:\ProyMondelez\Seguridad\IncidentesBL\bin\Release\log4net.xml
-C:\instal\Seguridad\IncidentesBL\bin\Release\IncidentesBL.dll
-C:\instal\Seguridad\IncidentesBL\bin\Release\IncidentesBL.pdb
-C:\instal\Seguridad\IncidentesBL\bin\Release\IncidentesADO.dll
-C:\instal\Seguridad\IncidentesBL\bin\Release\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesBL\bin\Release\log4net.dll
-C:\instal\Seguridad\IncidentesBL\bin\Release\IncidentesADO.pdb
-C:\instal\Seguridad\IncidentesBL\bin\Release\IncidentesBE.pdb
-C:\instal\Seguridad\IncidentesBL\bin\Release\log4net.xml
-C:\instal\Seguridad\IncidentesBL\obj\Release\IncidentesBL.csprojResolveAssemblyReference.cache
-C:\instal\Seguridad\IncidentesBL\obj\Release\IncidentesBL.dll
-C:\instal\Seguridad\IncidentesBL\obj\Release\IncidentesBL.pdb

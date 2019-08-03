@@ -5,14 +5,3 @@ C:\ProyMondelez\Seguridad\IncidentesADO\bin\Release\IncidentesBE.pdb
 C:\ProyMondelez\Seguridad\IncidentesADO\obj\Release\IncidentesADO.csprojResolveAssemblyReference.cache
 C:\ProyMondelez\Seguridad\IncidentesADO\obj\Release\IncidentesADO.dll
 C:\ProyMondelez\Seguridad\IncidentesADO\obj\Release\IncidentesADO.pdb
-C:\ProyMondelez\Seguridad\IncidentesADO\bin\Release\log4net.dll
-C:\ProyMondelez\Seguridad\IncidentesADO\bin\Release\log4net.xml
-C:\instal\Seguridad\IncidentesADO\bin\Release\IncidentesADO.dll
-C:\instal\Seguridad\IncidentesADO\bin\Release\IncidentesADO.pdb
-C:\instal\Seguridad\IncidentesADO\bin\Release\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesADO\bin\Release\log4net.dll
-C:\instal\Seguridad\IncidentesADO\bin\Release\IncidentesBE.pdb
-C:\instal\Seguridad\IncidentesADO\bin\Release\log4net.xml
-C:\instal\Seguridad\IncidentesADO\obj\Release\IncidentesADO.csprojResolveAssemblyReference.cache
-C:\instal\Seguridad\IncidentesADO\obj\Release\IncidentesADO.dll
-C:\instal\Seguridad\IncidentesADO\obj\Release\IncidentesADO.pdb

@@ -13,13 +13,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IncidentesWEB</RootNamespace>
     <AssemblyName>IncidentesWEB</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,7 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,14 +45,15 @@
     <Reference Include="itextsharp">
       <HintPath>..\PdfParsingiTextSharp.20140310\PdfParsingiTextSharp\lib\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -140,13 +141,6 @@
     <Content Include="Auditoria\Default.aspx" />
     <Content Include="Auditoria\images\cabecera.gif" />
     <Content Include="Auditoria\images\carga.gif" />
-    <Content Include="Comportamiento\Administrador.aspx" />
-    <Content Include="Comportamiento\fancy\jquery.fancybox.min.css" />
-    <Content Include="Comportamiento\fancy\jquery.fancybox.min.js" />
-    <Content Include="Comportamiento\fotos\amd_inseuro.jpg" />
-    <Content Include="Comportamiento\fotos\amd_seuro.jpg" />
-    <Content Include="Comportamiento\fotos\amp_inseuro.jpg" />
-    <Content Include="Comportamiento\fotos\amp_seuro.jpg" />
     <Content Include="Comportamiento\Images\add - Copy.jpg" />
     <Content Include="Comportamiento\Images\add.jpg" />
     <Content Include="Comportamiento\Images\add.png" />
@@ -166,8 +160,6 @@
     <Content Include="Comportamiento\Images\guardar2.jpg" />
     <Content Include="Comportamiento\Images\guardar3.jpg" />
     <Content Include="Comportamiento\Images\guardar4.jpg" />
-    <Content Include="Comportamiento\registrarArea.aspx" />
-    <Content Include="Comportamiento\Scripts\jquery-2.0.0.min.js" />
     <Content Include="css\Graficos.css" />
     <None Include="Auditoria\Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Auditoria\login_incidentes.aspx" />
@@ -269,7 +261,6 @@
     <Content Include="Indicadores\css\img\loadingAnimation.gif" />
     <Content Include="Indicadores\css\img\novedad1.jpg" />
     <Content Include="Indicadores\css\img\pdf.png" />
-    <Content Include="Indicadores\css\img\Print.png" />
     <Content Include="Indicadores\css\img\puntos.png" />
     <Content Include="Indicadores\css\img\right.png" />
     <Content Include="Indicadores\css\img\right_blue_square.png" />
@@ -936,6 +927,7 @@
     <Content Include="Images\pg_logo.gif" />
     <Content Include="Images\smallfondo_4.png" />
     <Content Include="Images\title.gif" />
+    <Content Include="Images\titulo.png" />
     <Content Include="include\menu_top.inc.aspx" />
     <Content Include="Login_mobile.aspx" />
     <Content Include="RRHH\Default.aspx" />
@@ -1633,20 +1625,6 @@
     </Compile>
     <Compile Include="Auditoria\ReportePlanAccion.aspx.designer.cs">
       <DependentUpon>ReportePlanAccion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comportamiento\Administrador.aspx.cs">
-      <DependentUpon>Administrador.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comportamiento\Administrador.aspx.designer.cs">
-      <DependentUpon>Administrador.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comportamiento\registrarArea.aspx.cs">
-      <DependentUpon>registrarArea.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comportamiento\registrarArea.aspx.designer.cs">
-      <DependentUpon>registrarArea.aspx</DependentUpon>
     </Compile>
     <Compile Include="Indicadores\ActualizarEvaluacion.aspx.cs">
       <DependentUpon>ActualizarEvaluacion.aspx</DependentUpon>

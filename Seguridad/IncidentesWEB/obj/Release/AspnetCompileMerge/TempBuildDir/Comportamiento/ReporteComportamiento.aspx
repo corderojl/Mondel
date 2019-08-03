@@ -65,24 +65,16 @@
                 <ContentTemplate>
                     <table style="width: 100%;">
                         <tr>
-                            <td>Area Labora:</td>
-                            <td>
-                                <asp:DropDownList ID="ddlSector" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlSector_SelectedIndexChanged">
-                                </asp:DropDownList>
-                            </td>
-
                             <td>Departamento:</td>
                             <td>
                                 <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </td>
-                            <td>Área:</td>
+                            <td>Guardia:</td>
                             <td>
-                                <asp:DropDownList ID="ddlArea" runat="server">
+                                <asp:DropDownList ID="ddlGuardia" runat="server">
                                 </asp:DropDownList>
                             </td>
-                        </tr>
-                        <tr>
                             <td>Auditor:</td>
                             <td>
                                 <asp:DropDownList ID="ddlAuditor" runat="server">
@@ -92,31 +84,35 @@
                                     <asp:ListItem Value="3">Requiere Capital</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
-                            <td>Categoria:</td>
+                        </tr>
+                        <tr>
+                            <td>Formato:</td>
                             <td>
+                                <asp:DropDownList ID="ddlFormato" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlFormato_SelectedIndexChanged">
+                                </asp:DropDownList>
+                            </td>
+                            <td>Categoria:</td>
+                            <td colspan="3">
+                                <asp:DropDownList ID="ddlCategoria" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCategoria_SelectedIndexChanged">
+                                </asp:DropDownList>
                                 <asp:DropDownList ID="ddlSubCategoria" runat="server">
                                     <asp:ListItem Selected="True" Value="%%">(Todos)</asp:ListItem>
-                                    <asp:ListItem Value="1">Mondelez</asp:ListItem>
+                                    <asp:ListItem Value="1">PG</asp:ListItem>
                                     <asp:ListItem Value="2">Contratista</asp:ListItem>
-                                </asp:DropDownList>
-
-                            </td>
-                            <td>Turno:</td>
-                            <td>
-                                <asp:DropDownList ID="ddlTurno" runat="server">
-                                    <asp:ListItem Value="%%">(Todos)</asp:ListItem>
-                                    <asp:ListItem>1</asp:ListItem>
-                                    <asp:ListItem>2</asp:ListItem>
-                                    <asp:ListItem>3</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                         </tr>
                         <tr>
+                            <td>Área:</td>
+                            <td>
+                                <asp:DropDownList ID="ddlArea" runat="server">
+                                </asp:DropDownList>
+                            </td>
                             <td>Tipo Empleado:</td>
                             <td>
                                 <asp:DropDownList ID="ddlTipo_emp" runat="server">
                                     <asp:ListItem Selected="True" Value="%%">(Todos)</asp:ListItem>
-                                    <asp:ListItem Value="1">Mondelez</asp:ListItem>
+                                    <asp:ListItem Value="1">PG</asp:ListItem>
                                     <asp:ListItem Value="2">Contratista</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
@@ -129,9 +125,6 @@
                                     <asp:ListItem Value="3">No</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
-                            <td>&nbsp;</td>
-                            <td>
-                                &nbsp;</td>
                         </tr>
                     </table>
                 </ContentTemplate>
@@ -144,12 +137,12 @@
                     <td>Desde:</td>
 
                     <td>
-                        <asp:TextBox ID="txtFecha" runat="server" autocomplete="off" CssClass="form_cal"></asp:TextBox>
+                        <asp:TextBox ID="txtFecha" runat="server"  autocomplete="off" CssClass="form_cal"></asp:TextBox>
                     </td>
                     <td>Hasta:</td>
                     <td>
 
-                        <asp:TextBox ID="txtFecha0" runat="server" autocomplete="off" CssClass="form_cal"></asp:TextBox>
+                        <asp:TextBox ID="txtFecha0" runat="server"  autocomplete="off" CssClass="form_cal"></asp:TextBox>
                     </td>
                 </tr>
                 <!--

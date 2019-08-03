@@ -85,19 +85,23 @@ C:\ProyMondelez\Seguridad\IndicadoresForm\obj\Debug\RdlCompile.cache
 C:\ProyMondelez\Seguridad\IndicadoresForm\obj\Debug\RdlCompile.compiled
 C:\ProyMondelez\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.exe
 C:\ProyMondelez\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.pdb
-C:\ProyMondelez\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmEjemplo.resources
-C:\ProyMondelez\Seguridad\IndicadoresForm\bin\Debug\log4net.dll
-C:\ProyMondelez\Seguridad\IndicadoresForm\bin\Debug\log4net.xml
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.csprojResolveAssemblyReference.cache
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmCargaRapida.resources
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmCartaPremio.resources
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmEjemplo.resources
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmReporteCarta.resources
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.EvaluacionIndicadoresMDI.resources
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.Form1.resources
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.Properties.Resources.resources
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.csproj.GenerateResource.Cache
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\RdlCompile.cache
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\RdlCompile.compiled
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.exe
-C:\instal\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.pdb
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmCargaRapida.resources
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmCartaPremio.resources
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.FrmReporteCarta.resources
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.EvaluacionIndicadoresMDI.resources
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.Form1.resources
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.Properties.Resources.resources
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.csproj.GenerateResource.Cache
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.exe
+C:\Mondel\Seguridad\IndicadoresForm\obj\Debug\IndicadoresForm.pdb
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.FrmCargaRapida.resources
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.FrmCartaPremio.resources
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.FrmReporteCarta.resources
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.EvaluacionIndicadoresMDI.resources
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.Form1.resources
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.Properties.Resources.resources
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.csproj.GenerateResource.Cache
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.exe
+C:\Mondel\Seguridad - copia (2)\IndicadoresForm\obj\Debug\IndicadoresForm.pdb

@@ -133,22 +133,33 @@ C:\ProyMondelez\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.Properties.Res
 C:\ProyMondelez\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.csproj.GenerateResource.Cache
 C:\ProyMondelez\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.exe
 C:\ProyMondelez\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.pdb
-C:\ProyMondelez\Seguridad\IncidentesMail\bin\Debug\log4net.dll
-C:\ProyMondelez\Seguridad\IncidentesMail\bin\Debug\log4net.xml
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesMail.exe.config
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesMail.exe
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesMail.pdb
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesBE.dll
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesBL.dll
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesADO.dll
-C:\instal\Seguridad\IncidentesMail\bin\Debug\log4net.dll
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesBE.pdb
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesBL.pdb
-C:\instal\Seguridad\IncidentesMail\bin\Debug\IncidentesADO.pdb
-C:\instal\Seguridad\IncidentesMail\bin\Debug\log4net.xml
-C:\instal\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.csprojResolveAssemblyReference.cache
-C:\instal\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.FrmDMSMail.resources
-C:\instal\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.Properties.Resources.resources
-C:\instal\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.csproj.GenerateResource.Cache
-C:\instal\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.exe
-C:\instal\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.pdb
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesMail.exe.config
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesMail.exe
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesMail.pdb
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesBL.dll
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesADO.dll
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesBL.pdb
+C:\Mondel\Seguridad\IncidentesMail\bin\Debug\IncidentesADO.pdb
+C:\Mondel\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.FrmDMSMail.resources
+C:\Mondel\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.Properties.Resources.resources
+C:\Mondel\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.csproj.GenerateResource.Cache
+C:\Mondel\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.exe
+C:\Mondel\Seguridad\IncidentesMail\obj\Debug\IncidentesMail.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesMail.exe.config
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesMail.exe
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesMail.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesBL.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesADO.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesBL.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\IncidentesADO.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.FrmDMSMail.resources
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.Properties.Resources.resources
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.csproj.GenerateResource.Cache
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.exe
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.pdb
