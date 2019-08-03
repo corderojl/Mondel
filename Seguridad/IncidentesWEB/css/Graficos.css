@@ -1,0 +1,52 @@
+﻿body {
+    
+}
+.triangulo_sup {
+     width: 0;
+     height: 0;
+     border-right: 50px solid transparent;
+     border-top: 100px solid transparent;
+     border-left: 50px solid transparent;
+     margin: 0 auto;
+     padding-bottom: 2px;
+     vertical-align:middle;
+     font-size: x-large;
+     color: #000;
+     text-align:center;
+}
+.trapecio-medio {
+    width: 100px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #428bca;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    font-size: x-large;
+    color: #000;
+    text-align:center;
+}
+.trapecio-bajo {
+    width: 220px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #91c11b;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    font-size: x-large;
+    color: #000;
+    text-align:center;
+}
+.trapecio-base {
+    width: 340px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #de4514;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    font-size: x-large;
+    color: #000;
+    text-align:center;
+}

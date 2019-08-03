@@ -1,0 +1,98 @@
+﻿table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 95%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	/*background-image: url(img/bg.gif);*/
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	/*background-image: url(img/asc.gif);*/
+}
+table.tablesorter thead tr .headerSortDown {
+	/*background-image: url(img/desc.gif);*/
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+#contenido_form {
+    display: block;
+    width: 85%;
+    min-height: 450px;
+    height: auto;
+    margin: 0px auto;
+    background-color: #fff;
+    padding: 20px 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 3px 5px rgba(50, 50, 50, 0.4);
+    position: relative;
+    /* z-index: 999; */
+    padding: 35px 10px;
+    margin: 20px auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+Button, textarea, input[type=text] {
+    font-family: 'PTSansRegular';
+    font-size: 13px;
+    display: flexbox;
+    border: 1px solid #aaa;
+    color: #645047;
+    background-color: #ccc;
+    line-height: 16px;
+    padding: 1px 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    }
+Select {
+    font-size: 13px;
+    display: flexbox;
+    border: 1px solid #aaa;
+    color: #645047;
+    background-color: #ccc;
+    line-height: 16px;
+    padding: 1px 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    width: 220px;
+    }
+
+.form_label {
+    padding: 3px 0px;
+    min-height: 26px;
+    line-height: 26px;
+    display: block;
+    position: relative;
+    clear: both;
+    font-size: 16px;
+    color: #78BE20;
+}

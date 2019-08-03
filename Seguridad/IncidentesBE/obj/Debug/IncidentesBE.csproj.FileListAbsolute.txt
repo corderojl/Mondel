@@ -1,0 +1,54 @@
+C:\desarrollo P&G\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\desarrollo P&G\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\desarrollo P&G\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\desarrollo P&G\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\desarrollo P&G\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+D:\pg\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.dll
+D:\pg\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.pdb
+D:\pg\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+D:\pg\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.dll
+D:\pg\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.pdb
+D:\Mondelez\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.dll
+D:\Mondelez\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.pdb
+D:\Mondelez\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+D:\Mondelez\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.dll
+D:\Mondelez\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\UPC\Mon\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\UPC\Mon\SistemaIncidentes\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\UPC\Mon\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\UPC\Mon\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\UPC\Mon\SistemaIncidentes\IncidentesBE\obj\Debug\IncidentesBE.pdb
+D:\Mondelez\SistemaIncidentes V8\IncidentesBE\bin\Debug\IncidentesBE.dll
+D:\Mondelez\SistemaIncidentes V8\IncidentesBE\bin\Debug\IncidentesBE.pdb
+D:\Mondelez\SistemaIncidentes V8\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+D:\Mondelez\SistemaIncidentes V8\IncidentesBE\obj\Debug\IncidentesBE.dll
+D:\Mondelez\SistemaIncidentes V8\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\UPC\Mon\SistemaIncidentes V8\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\UPC\Mon\SistemaIncidentes V8\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\UPC\Mon\SistemaIncidentes V8\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\UPC\Mon\SistemaIncidentes V8\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\UPC\Mon\SistemaIncidentes V8\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\ProyMondelez\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\ProyMondelez\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\ProyMondelez\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\ProyMondelez\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\ProyMondelez\IncidentesBE\obj\Debug\IncidentesBE.pdb
+D:\Mondelez\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.dll
+D:\Mondelez\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.pdb
+D:\Mondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
+D:\Mondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\ProyMon\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\ProyMon\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\ProyMon\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\ProyMon\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\ProyMon\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
+D:\Mondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\ProyMondelez\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\ProyMondelez\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\ProyMondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\ProyMondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
+C:\ProyMondelez\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
+C:\instal\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.dll
+C:\instal\Seguridad\IncidentesBE\bin\Debug\IncidentesBE.pdb
+C:\instal\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
+C:\instal\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb

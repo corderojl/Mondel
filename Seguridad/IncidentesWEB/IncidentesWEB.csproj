@@ -1,0 +1,2436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8FB7AD7-92BD-4A9F-8F41-5A437B4FC32C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IncidentesWEB</RootNamespace>
+    <AssemblyName>IncidentesWEB</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\PdfParsingiTextSharp.20140310\PdfParsingiTextSharp\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\ActualizarDepartamento.aspx" />
+    <Content Include="admin\ActualizarFuncionarioPop.aspx" />
+    <Content Include="admin\AdministracionFuncionarios.aspx" />
+    <Content Include="admin\css\img\add-p.png" />
+    <Content Include="admin\Administrador.aspx" />
+    <Content Include="admin\EvaluarIncidente.aspx" />
+    <Content Include="admin\images\cabecera.png" />
+    <Content Include="admin\registrarTipoDanio.aspx" />
+    <Content Include="admin\registrarParteCuerpo.aspx" />
+    <Content Include="admin\registrarArea.aspx" />
+    <Content Include="admin\registrarCausaInmediata.aspx" />
+    <Content Include="admin\registrarCausaRaiz.aspx" />
+    <Content Include="admin\registrarRiesgoInvolucrado.aspx" />
+    <Content Include="admin\registrarCondicionInvolucrada.aspx" />
+    <Content Include="admin\registrarEstatusOperacional.aspx" />
+    <Content Include="admin\registrarClasificacion.aspx" />
+    <Content Include="admin\RegistrarFuncionarioPop.aspx" />
+    <Content Include="admin\TrianguloSeguridad.aspx" />
+    <Content Include="ajax\test-ajax-2.html" />
+    <Content Include="ajax\test-ajax.html" />
+    <Content Include="Alerta\registrarCriticidad.aspx" />
+    <Content Include="Alerta\registrarGuardia.aspx" />
+    <Content Include="Alerta\registrarEventoQA.aspx" />
+    <Content Include="Alerta\ReporteCumplimiento.aspx" />
+    <Content Include="Alerta\ReporteEstadistica.aspx" />
+    <Content Include="Auditoria\ActualizarAuditoria.aspx" />
+    <Content Include="Auditoria\ActualizarAuditoriaPop.aspx" />
+    <Content Include="Auditoria\AdministrarPregunta.aspx" />
+    <Content Include="Auditoria\AdministrarAuditoria.aspx" />
+    <Content Include="Auditoria\css\img\asc.gif" />
+    <Content Include="Auditoria\css\img\bg-wrapper-blue.png" />
+    <Content Include="Auditoria\css\img\bg.gif" />
+    <Content Include="Auditoria\css\img\blank.gif" />
+    <Content Include="Auditoria\css\img\boton_gmd.png" />
+    <Content Include="Auditoria\css\img\bullet.png" />
+    <Content Include="Auditoria\css\img\bullet1.png" />
+    <Content Include="Auditoria\css\img\camera.png" />
+    <Content Include="Auditoria\css\img\cuadraditos.jpg" />
+    <Content Include="Auditoria\css\img\desc.gif" />
+    <Content Include="Auditoria\css\img\descarga.jpg" />
+    <Content Include="Auditoria\css\img\enlace.jpg" />
+    <Content Include="Auditoria\css\img\enlace.png" />
+    <Content Include="Auditoria\css\img\excel.png" />
+    <Content Include="Auditoria\css\img\fancybox_close.png" />
+    <Content Include="Auditoria\css\img\fancybox_close2.png" />
+    <Content Include="Auditoria\css\img\fancybox_loading.gif" />
+    <Content Include="Auditoria\css\img\fancybox_next.png" />
+    <Content Include="Auditoria\css\img\fancybox_overlay.png" />
+    <Content Include="Auditoria\css\img\fancybox_prev.png" />
+    <Content Include="Auditoria\css\img\fancybox_prev11.png" />
+    <Content Include="Auditoria\css\img\fancybox_sprite.png" />
+    <Content Include="Auditoria\css\img\flecha_galeria.png" />
+    <Content Include="Auditoria\css\img\graf1.jpg" />
+    <Content Include="Auditoria\css\img\graf2.png" />
+    <Content Include="Auditoria\css\img\left.png" />
+    <Content Include="Auditoria\css\img\lines.png" />
+    <Content Include="Auditoria\css\img\link.jpg" />
+    <Content Include="Auditoria\css\img\link2.png" />
+    <Content Include="Auditoria\css\img\loading.gif" />
+    <Content Include="Auditoria\css\img\loadingAnimation.gif" />
+    <Content Include="Auditoria\css\img\novedad1.jpg" />
+    <Content Include="Auditoria\css\img\pdf.png" />
+    <Content Include="Auditoria\css\img\puntos.png" />
+    <Content Include="Auditoria\css\img\right.png" />
+    <Content Include="Auditoria\css\img\right_blue_square.png" />
+    <Content Include="Auditoria\css\img\rss.png" />
+    <Content Include="Auditoria\css\img\search.png" />
+    <Content Include="Auditoria\css\img\sombra_intranet.png" />
+    <Content Include="Auditoria\css\img\sub_bullet.png" />
+    <Content Include="Auditoria\css\style_cms.css" />
+    <Content Include="Auditoria\Default.aspx" />
+    <Content Include="Auditoria\images\cabecera.gif" />
+    <Content Include="Auditoria\images\carga.gif" />
+    <Content Include="Comportamiento\Administrador.aspx" />
+    <Content Include="Comportamiento\fancy\jquery.fancybox.min.css" />
+    <Content Include="Comportamiento\fancy\jquery.fancybox.min.js" />
+    <Content Include="Comportamiento\fotos\amd_inseuro.jpg" />
+    <Content Include="Comportamiento\fotos\amd_seuro.jpg" />
+    <Content Include="Comportamiento\fotos\amp_inseuro.jpg" />
+    <Content Include="Comportamiento\fotos\amp_seuro.jpg" />
+    <Content Include="Comportamiento\Images\add - Copy.jpg" />
+    <Content Include="Comportamiento\Images\add.jpg" />
+    <Content Include="Comportamiento\Images\add.png" />
+    <Content Include="Comportamiento\Images\btnCerrar.png" />
+    <Content Include="Comportamiento\Images\btnCerrar1.png" />
+    <Content Include="Comportamiento\Images\btnEditar.png" />
+    <Content Include="Comportamiento\Images\btnEliminar.png" />
+    <Content Include="Comportamiento\Images\btnGuardar.png" />
+    <Content Include="Comportamiento\Images\change.png" />
+    <Content Include="Comportamiento\Images\editar.fw.png" />
+    <Content Include="Comportamiento\Images\editar.jpg" />
+    <Content Include="Comportamiento\Images\Eliminar.jpg" />
+    <Content Include="Comportamiento\Images\Eliminar2.jpg" />
+    <Content Include="Comportamiento\Images\Eliminar3.jpg" />
+    <Content Include="Comportamiento\Images\guardar.jpg" />
+    <Content Include="Comportamiento\Images\guardar.png" />
+    <Content Include="Comportamiento\Images\guardar2.jpg" />
+    <Content Include="Comportamiento\Images\guardar3.jpg" />
+    <Content Include="Comportamiento\Images\guardar4.jpg" />
+    <Content Include="Comportamiento\registrarArea.aspx" />
+    <Content Include="Comportamiento\Scripts\jquery-2.0.0.min.js" />
+    <Content Include="css\Graficos.css" />
+    <None Include="Auditoria\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Auditoria\login_incidentes.aspx" />
+    <Content Include="Auditoria\logout.aspx" />
+    <Content Include="Auditoria\RegistrarAuditoria.aspx" />
+    <Content Include="Auditoria\ReporteAuditoria.aspx" />
+    <Content Include="Auditoria\ReportePlanAccion.aspx" />
+    <Content Include="Auditoria\Scripts\jquery-1.4.1.js" />
+    <Content Include="Auditoria\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Auditoria\Scripts\jquery.datetimepicker.js" />
+    <Content Include="Auditoria\Scripts\jquery.js" />
+    <Content Include="Auditoria\Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Auditoria\Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="Auditoria\Scripts\jquery.ui.core.js" />
+    <Content Include="Auditoria\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="Auditoria\Scripts\jquery.ui.widget.js" />
+    <Content Include="Auditoria\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Auditoria\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Auditoria\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Auditoria\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Auditoria\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Auditoria\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Auditoria\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Auditoria\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Auditoria\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Auditoria\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Auditoria\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Auditoria\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Auditoria\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Auditoria\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Auditoria\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Auditoria\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="Auditoria\Styles\jquery.datetimepicker.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.accordion.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.all.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.base.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.button.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.core.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.datepicker.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.dialog.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.progressbar.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.resizable.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.selectable.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.slider.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.tabs.css" />
+    <Content Include="Auditoria\Styles\jquery.ui.theme.css" />
+    <Content Include="Auditoria\Styles\Site.css" />
+    <Content Include="css\css_tabla.css" />
+    <Content Include="css\material-modal.css" />
+    <Content Include="css\popup.css" />
+    <Content Include="css\theme.blue.css" />
+    <Content Include="Images\flechaabajo.jpg" />
+    <Content Include="Images\flechaabajo.png" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\LogoMondelez.png" />
+    <Content Include="Images\pg_logo111.gif" />
+    <Content Include="Images\pg_logo3.gif" />
+    <Content Include="Images\Print.gif" />
+    <Content Include="Images\Print.jpg" />
+    <Content Include="Images\Print.png" />
+    <Content Include="Images\status0.png" />
+    <Content Include="Images\status1.png" />
+    <Content Include="Images\titulo.jpg" />
+    <Content Include="Indicadores\ActualizarEvaluacion.aspx" />
+    <Content Include="Indicadores\ActualizarFuncionarioPop.aspx" />
+    <Content Include="Indicadores\AdministracionFuncionarios.aspx" />
+    <Content Include="Indicadores\css\img\add-p.png" />
+    <Content Include="Indicadores\css\img\asc.gif" />
+    <Content Include="Indicadores\css\img\bg-wrapper-blue.png" />
+    <Content Include="Indicadores\css\img\bg.gif" />
+    <Content Include="Indicadores\css\img\blank.gif" />
+    <Content Include="Indicadores\css\img\boton_gmd.png" />
+    <Content Include="Indicadores\css\img\bullet.png" />
+    <Content Include="Indicadores\css\img\bullet1.png" />
+    <Content Include="Indicadores\css\img\camera.png" />
+    <Content Include="Indicadores\css\img\cuadraditos.jpg" />
+    <Content Include="Indicadores\css\img\desc.gif" />
+    <Content Include="Indicadores\css\img\descarga.jpg" />
+    <Content Include="Indicadores\css\img\enlace.jpg" />
+    <Content Include="Indicadores\css\img\enlace.png" />
+    <Content Include="Indicadores\css\img\excel.png" />
+    <Content Include="Indicadores\css\img\fancybox_close.png" />
+    <Content Include="Indicadores\css\img\fancybox_close2.png" />
+    <Content Include="Indicadores\css\img\fancybox_loading.gif" />
+    <Content Include="Indicadores\css\img\fancybox_next.png" />
+    <Content Include="Indicadores\css\img\fancybox_overlay.png" />
+    <Content Include="Indicadores\css\img\fancybox_prev.png" />
+    <Content Include="Indicadores\css\img\fancybox_prev11.png" />
+    <Content Include="Indicadores\css\img\fancybox_sprite.png" />
+    <Content Include="Indicadores\css\img\flecha_galeria.png" />
+    <Content Include="Indicadores\css\img\graf1.jpg" />
+    <Content Include="Indicadores\css\img\graf2.png" />
+    <Content Include="Indicadores\css\img\left.png" />
+    <Content Include="Indicadores\css\img\lines.png" />
+    <Content Include="Indicadores\css\img\link.jpg" />
+    <Content Include="Indicadores\css\img\link2.png" />
+    <Content Include="Indicadores\css\img\loading.gif" />
+    <Content Include="Indicadores\css\img\loadingAnimation.gif" />
+    <Content Include="Indicadores\css\img\novedad1.jpg" />
+    <Content Include="Indicadores\css\img\pdf.png" />
+    <Content Include="Indicadores\css\img\Print.png" />
+    <Content Include="Indicadores\css\img\puntos.png" />
+    <Content Include="Indicadores\css\img\right.png" />
+    <Content Include="Indicadores\css\img\right_blue_square.png" />
+    <Content Include="Indicadores\css\img\rss.png" />
+    <Content Include="Indicadores\css\img\search.png" />
+    <Content Include="Indicadores\css\img\sombra_intranet.png" />
+    <Content Include="Indicadores\css\img\sub_bullet.png" />
+    <Content Include="Indicadores\css\style_cms.css" />
+    <Content Include="Indicadores\Default.aspx" />
+    <Content Include="Indicadores\download.aspx" />
+    <Content Include="Indicadores\Images\add - Copy.jpg" />
+    <Content Include="Indicadores\Images\add.jpg" />
+    <Content Include="Indicadores\Images\add.png" />
+    <Content Include="Indicadores\Images\btnCerrar.png" />
+    <Content Include="Indicadores\Images\btnCerrar1.png" />
+    <Content Include="Indicadores\Images\btnEliminar.png" />
+    <Content Include="Indicadores\Images\carga.gif" />
+    <Content Include="Indicadores\js\sidr-package-1.0.0\jquery.sidr.min.js" />
+    <Content Include="Indicadores\js\sidr-package-1.0.0\stylesheets\jquery.sidr.dark.css" />
+    <Content Include="Indicadores\js\sidr-package-1.0.0\stylesheets\jquery.sidr.light.css" />
+    <Content Include="Indicadores\AdminMaster.Master" />
+    <Content Include="Indicadores\dsIndicadores.xsc">
+      <DependentUpon>dsIndicadores.xsd</DependentUpon>
+    </Content>
+    <None Include="Indicadores\dsIndicadores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIndicadores.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Indicadores\dsIndicadores.xss">
+      <DependentUpon>dsIndicadores.xsd</DependentUpon>
+    </Content>
+    <None Include="Indicadores\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Indicadores\login_incidentes.aspx" />
+    <Content Include="Indicadores\logout.aspx" />
+    <Content Include="Indicadores\RegistrarEvaluacion.aspx" />
+    <Content Include="Indicadores\RegistrarFuncionarioPop.aspx" />
+    <Content Include="Indicadores\ReporteCurva.aspx" />
+    <Content Include="Indicadores\ReporteIndicadores.aspx" />
+    <Content Include="Indicadores\rptEvaluacionColegaAll.aspx" />
+    <Content Include="Indicadores\rptEvaluacionColega.aspx" />
+    <Content Include="Indicadores\Scripts\jquery-1.2.6.min.js" />
+    <Content Include="Indicadores\Scripts\jquery-1.4.1.js" />
+    <Content Include="Indicadores\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Indicadores\Scripts\jquery.datetimepicker.js" />
+    <Content Include="Indicadores\Scripts\jquery.js" />
+    <Content Include="Indicadores\Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Indicadores\Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="Indicadores\Scripts\jquery.ui.core.js" />
+    <Content Include="Indicadores\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="Indicadores\Scripts\jquery.ui.widget.js" />
+    <Content Include="Indicadores\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Indicadores\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Indicadores\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Indicadores\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Indicadores\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Indicadores\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Indicadores\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Indicadores\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Indicadores\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Indicadores\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Indicadores\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Indicadores\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Indicadores\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Indicadores\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Indicadores\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Indicadores\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="Indicadores\Styles\jquery.datetimepicker.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.accordion.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.all.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.base.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.button.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.core.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.datepicker.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.dialog.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.progressbar.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.resizable.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.selectable.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.slider.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.tabs.css" />
+    <Content Include="Indicadores\Styles\jquery.ui.theme.css" />
+    <Content Include="Indicadores\Styles\Site.css" />
+    <Content Include="lib\all.min.css" />
+    <Content Include="lib\jquery.js" />
+    <Content Include="lib\jquery.magnific-popup.js" />
+    <Content Include="lib\jquery.magnific-popup.min.js" />
+    <Content Include="lib\magnific-popup.css" />
+    <Content Include="login.aspx" />
+    <Content Include="LUPs\ActualizarFuncionarioPop.aspx" />
+    <Content Include="LUPs\ActualizarLup.aspx" />
+    <Content Include="LUPs\ActualizarLupPop.aspx" />
+    <Content Include="LUPs\AdministracionFuncionarios.aspx" />
+    <Content Include="LUPs\Administrador.aspx" />
+    <Content Include="LUPs\css\img\add-p.png" />
+    <Content Include="LUPs\css\img\vssver2.scc" />
+    <Content Include="LUPs\Archivos\ATBPDF_2018-02-13_18.31.34.443.pdf" />
+    <None Include="LUPs\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="LUPs\css\img\asc.gif" />
+    <Content Include="LUPs\css\img\bg-wrapper-blue.png" />
+    <Content Include="LUPs\css\img\bg.gif" />
+    <Content Include="LUPs\css\img\blank.gif" />
+    <Content Include="LUPs\css\img\boton_gmd.png" />
+    <Content Include="LUPs\css\img\bullet.png" />
+    <Content Include="LUPs\css\img\bullet1.png" />
+    <Content Include="LUPs\css\img\camera.png" />
+    <Content Include="LUPs\css\img\cuadraditos.jpg" />
+    <Content Include="LUPs\css\img\desc.gif" />
+    <Content Include="LUPs\css\img\descarga.jpg" />
+    <Content Include="LUPs\css\img\enlace.jpg" />
+    <Content Include="LUPs\css\img\enlace.png" />
+    <Content Include="LUPs\css\img\excel.png" />
+    <Content Include="LUPs\css\img\fancybox_close.png" />
+    <Content Include="LUPs\css\img\fancybox_close2.png" />
+    <Content Include="LUPs\css\img\fancybox_loading.gif" />
+    <Content Include="LUPs\css\img\fancybox_next.png" />
+    <Content Include="LUPs\css\img\fancybox_overlay.png" />
+    <Content Include="LUPs\css\img\fancybox_prev.png" />
+    <Content Include="LUPs\css\img\fancybox_prev11.png" />
+    <Content Include="LUPs\css\img\fancybox_sprite.png" />
+    <Content Include="LUPs\css\img\flecha_galeria.png" />
+    <Content Include="LUPs\css\img\graf1.jpg" />
+    <Content Include="LUPs\css\img\graf2.png" />
+    <Content Include="LUPs\css\img\left.png" />
+    <Content Include="LUPs\css\img\lines.png" />
+    <Content Include="LUPs\css\img\link.jpg" />
+    <Content Include="LUPs\css\img\link2.png" />
+    <Content Include="LUPs\css\img\loading.gif" />
+    <Content Include="LUPs\css\img\loadingAnimation.gif" />
+    <Content Include="LUPs\css\img\novedad1.jpg" />
+    <Content Include="LUPs\css\img\pdf.png" />
+    <Content Include="LUPs\css\img\puntos.png" />
+    <Content Include="LUPs\css\img\right.png" />
+    <Content Include="LUPs\css\img\right_blue_square.png" />
+    <Content Include="LUPs\css\img\rss.png" />
+    <Content Include="LUPs\css\img\search.png" />
+    <Content Include="LUPs\css\img\sombra_intranet.png" />
+    <Content Include="LUPs\css\img\sub_bullet.png" />
+    <Content Include="LUPs\css\style_cms.css" />
+    <Content Include="LUPs\Default.aspx" />
+    <Content Include="LUPs\Images\archivo.jpg" />
+    <Content Include="LUPs\Images\carga.gif" />
+    <Content Include="LUPs\Images\excel.jpg" />
+    <Content Include="LUPs\Images\imagen.jpg" />
+    <Content Include="LUPs\Images\pdf.jpg" />
+    <Content Include="LUPs\Images\photos.jpg" />
+    <Content Include="LUPs\Images\power.jpg" />
+    <Content Include="LUPs\Images\word.jpg" />
+    <Content Include="LUPs\Login.aspx" />
+    <Content Include="LUPs\Logout.aspx" />
+    <Content Include="LUPs\registrarCategoria.aspx" />
+    <Content Include="LUPs\registrarPilar.aspx" />
+    <Content Include="LUPs\RegistrarFuncionarioPop.aspx" />
+    <Content Include="LUPs\RegistrarLup.aspx" />
+    <Content Include="LUPs\registrarResponsableCategoria.aspx" />
+    <Content Include="LUPs\ReporteLups.aspx" />
+    <Content Include="LUPs\Scripts\jquery-1.4.1.js" />
+    <Content Include="LUPs\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="LUPs\Scripts\jquery.datetimepicker.js" />
+    <Content Include="LUPs\Scripts\jquery.js" />
+    <Content Include="LUPs\Scripts\jquery.tablesorter.min.js" />
+    <Content Include="LUPs\Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="LUPs\Scripts\jquery.ui.core.js" />
+    <Content Include="LUPs\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="LUPs\Scripts\jquery.ui.widget.js" />
+    <Content Include="LUPs\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="LUPs\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="LUPs\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="LUPs\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="LUPs\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="LUPs\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="LUPs\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="LUPs\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="LUPs\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="LUPs\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="LUPs\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="LUPs\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="LUPs\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="LUPs\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="LUPs\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="LUPs\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="LUPs\Styles\jquery.ui.accordion.css" />
+    <Content Include="LUPs\Styles\jquery.ui.all.css" />
+    <Content Include="LUPs\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="LUPs\Styles\jquery.ui.base.css" />
+    <Content Include="LUPs\Styles\jquery.ui.button.css" />
+    <Content Include="LUPs\Styles\jquery.ui.core.css" />
+    <Content Include="LUPs\Styles\jquery.ui.datepicker.css" />
+    <Content Include="LUPs\Styles\jquery.ui.dialog.css" />
+    <Content Include="LUPs\Styles\jquery.ui.progressbar.css" />
+    <Content Include="LUPs\Styles\jquery.ui.resizable.css" />
+    <Content Include="LUPs\Styles\jquery.ui.selectable.css" />
+    <Content Include="LUPs\Styles\jquery.ui.slider.css" />
+    <Content Include="LUPs\Styles\jquery.ui.tabs.css" />
+    <Content Include="LUPs\Styles\jquery.ui.theme.css" />
+    <Content Include="LUPs\Styles\Site.css" />
+    <Content Include="Novedades\ActualizarNovedadesPop.aspx" />
+    <Content Include="Novedades\css\style_cms.css" />
+    <Content Include="Novedades\Default.aspx" />
+    <Content Include="Novedades\login_Novedades.aspx" />
+    <Content Include="Novedades\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Novedades\Scripts\jquery.tinymce.min.js" />
+    <Content Include="Novedades\Scripts\plugins\advlist\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\anchor\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\autolink\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\autoresize\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\autosave\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\bbcode\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\charmap\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\codesample\css\prism.css" />
+    <Content Include="Novedades\Scripts\plugins\codesample\plugin.dev.js" />
+    <Content Include="Novedades\Scripts\plugins\codesample\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\code\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\directionality\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Novedades\Scripts\plugins\emoticons\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\example\dialog.html" />
+    <Content Include="Novedades\Scripts\plugins\example\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\example_dependency\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\fullpage\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\hr\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\imagetools\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\image\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\importcss\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\layer\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\link\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\lists\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\media\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\noneditable\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\paste\plugin.dev.js" />
+    <Content Include="Novedades\Scripts\plugins\paste\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\preview\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\print\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\save\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\spellchecker\plugin.dev.js" />
+    <Content Include="Novedades\Scripts\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\table\plugin.dev.js" />
+    <Content Include="Novedades\Scripts\plugins\table\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\template\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\textcolor\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\textpattern\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\toc\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Novedades\Scripts\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\visualchars\plugin.min.js" />
+    <Content Include="Novedades\Scripts\plugins\wordcount\plugin.min.js" />
+    <Content Include="Novedades\Scripts\skins\lightgray\content.inline.min.css" />
+    <Content Include="Novedades\Scripts\skins\lightgray\content.min.css" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Novedades\Scripts\skins\lightgray\img\anchor.gif" />
+    <Content Include="Novedades\Scripts\skins\lightgray\img\loader.gif" />
+    <Content Include="Novedades\Scripts\skins\lightgray\img\object.gif" />
+    <Content Include="Novedades\Scripts\skins\lightgray\img\trans.gif" />
+    <Content Include="Novedades\Scripts\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="Novedades\Scripts\skins\lightgray\skin.min.css" />
+    <Content Include="Novedades\Scripts\themes\inlite\theme.min.js" />
+    <Content Include="Novedades\Scripts\themes\modern\theme.min.js" />
+    <Content Include="Novedades\Scripts\tinymce.min.js" />
+    <Content Include="registrarResponsablePilar.aspx" />
+    <Content Include="registrarResponsable.aspx" />
+    <Content Include="PlanPendiente.aspx" />
+    <Content Include="popup.html" />
+    <Content Include="Reconocimiento\css\images\estrella.jpg" />
+    <Content Include="Reconocimiento\css\images\estrella.png" />
+    <Content Include="Reconocimiento\css\styleRec.css" />
+    <Content Include="Reconocimiento\Reconocimiento.aspx" />
+    <Content Include="Reconocimiento\ReporteReconocimiento.aspx" />
+    <Content Include="registrarDepartamento.aspx" />
+    <Content Include="Reporte.html" />
+    <Content Include="ReporteSLT.aspx" />
+    <Content Include="RRHH\ActualizarDepartamento.aspx" />
+    <Content Include="admin\ActualizarIncidente.aspx" />
+    <Content Include="admin\ActualizarPlanInmediato.aspx" />
+    <Content Include="admin\ActualizarPlanAccion.aspx" />
+    <Content Include="admin\ControlTeam.aspx" />
+    <Content Include="RRHH\ControlTeam.aspx" />
+    <Content Include="RRHH\css\img\asc.gif" />
+    <Content Include="RRHH\css\img\bg-wrapper-blue.png" />
+    <Content Include="RRHH\css\img\bg.gif" />
+    <Content Include="RRHH\css\img\blank.gif" />
+    <Content Include="RRHH\css\img\boton_gmd.png" />
+    <Content Include="RRHH\css\img\bullet.png" />
+    <Content Include="RRHH\css\img\bullet1.png" />
+    <Content Include="RRHH\css\img\camera.png" />
+    <Content Include="RRHH\css\img\cuadraditos.jpg" />
+    <Content Include="RRHH\css\img\desc.gif" />
+    <Content Include="RRHH\css\img\descarga.jpg" />
+    <Content Include="RRHH\css\img\enlace.jpg" />
+    <Content Include="RRHH\css\img\enlace.png" />
+    <Content Include="RRHH\css\img\excel.png" />
+    <Content Include="RRHH\css\img\fancybox_close.png" />
+    <Content Include="RRHH\css\img\fancybox_close2.png" />
+    <Content Include="RRHH\css\img\fancybox_loading.gif" />
+    <Content Include="RRHH\css\img\fancybox_next.png" />
+    <Content Include="RRHH\css\img\fancybox_overlay.png" />
+    <Content Include="RRHH\css\img\fancybox_prev.png" />
+    <Content Include="RRHH\css\img\fancybox_prev11.png" />
+    <Content Include="RRHH\css\img\fancybox_sprite.png" />
+    <Content Include="RRHH\css\img\flecha_galeria.png" />
+    <Content Include="RRHH\css\img\graf1.jpg" />
+    <Content Include="RRHH\css\img\graf2.png" />
+    <Content Include="RRHH\css\img\left.png" />
+    <Content Include="RRHH\css\img\lines.png" />
+    <Content Include="RRHH\css\img\link.jpg" />
+    <Content Include="RRHH\css\img\link2.png" />
+    <Content Include="RRHH\css\img\loading.gif" />
+    <Content Include="RRHH\css\img\loadingAnimation.gif" />
+    <Content Include="RRHH\css\img\novedad1.jpg" />
+    <Content Include="RRHH\css\img\pdf.png" />
+    <Content Include="RRHH\css\img\puntos.png" />
+    <Content Include="RRHH\css\img\right.png" />
+    <Content Include="RRHH\css\img\right_blue_square.png" />
+    <Content Include="RRHH\css\img\rss.png" />
+    <Content Include="RRHH\css\img\search.png" />
+    <Content Include="RRHH\css\img\sombra_intranet.png" />
+    <Content Include="RRHH\css\img\sub_bullet.png" />
+    <Content Include="RRHH\css\style_cms.css" />
+    <Content Include="RRHH\func_grupo.aspx" />
+    <Content Include="admin\images\carga.gif" />
+    <Content Include="admin\images\status0.png" />
+    <Content Include="admin\images\status1.png" />
+    <Content Include="admin\PlanesPendientes.aspx" />
+    <Content Include="admin\ReportePlanAccion.aspx" />
+    <Content Include="admin\ReporteEstadistica.aspx" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\EvaluacionIncidentePop.aspx" />
+    <Content Include="admin\login_incidentes.aspx" />
+    <Content Include="admin\logout.aspx" />
+    <Content Include="admin\RegistrarPlanAccion.aspx" />
+    <Content Include="admin\ReporteIncidente.aspx" />
+    <Content Include="admin\ValidarIncidente.aspx" />
+    <Content Include="admin\css\img\asc.gif" />
+    <Content Include="admin\css\img\bg-wrapper-blue.png" />
+    <Content Include="admin\css\img\bg.gif" />
+    <Content Include="admin\css\img\blank.gif" />
+    <Content Include="admin\css\img\boton_gmd.png" />
+    <Content Include="admin\css\img\bullet.png" />
+    <Content Include="admin\css\img\bullet1.png" />
+    <Content Include="admin\css\img\camera.png" />
+    <Content Include="admin\css\img\cuadraditos.jpg" />
+    <Content Include="admin\css\img\desc.gif" />
+    <Content Include="admin\css\img\descarga.jpg" />
+    <Content Include="admin\css\img\enlace.jpg" />
+    <Content Include="admin\css\img\enlace.png" />
+    <Content Include="admin\css\img\excel.png" />
+    <Content Include="admin\css\img\fancybox_close.png" />
+    <Content Include="admin\css\img\fancybox_close2.png" />
+    <Content Include="admin\css\img\fancybox_loading.gif" />
+    <Content Include="admin\css\img\fancybox_next.png" />
+    <Content Include="admin\css\img\fancybox_overlay.png" />
+    <Content Include="admin\css\img\fancybox_prev.png" />
+    <Content Include="admin\css\img\fancybox_prev11.png" />
+    <Content Include="admin\css\img\fancybox_sprite.png" />
+    <Content Include="admin\css\img\flecha_galeria.png" />
+    <Content Include="admin\css\img\graf1.jpg" />
+    <Content Include="admin\css\img\graf2.png" />
+    <Content Include="admin\css\img\left.png" />
+    <Content Include="admin\css\img\lines.png" />
+    <Content Include="admin\css\img\link.jpg" />
+    <Content Include="admin\css\img\link2.png" />
+    <Content Include="admin\css\img\loading.gif" />
+    <Content Include="admin\css\img\loadingAnimation.gif" />
+    <Content Include="admin\css\img\novedad1.jpg" />
+    <Content Include="admin\css\img\pdf.png" />
+    <Content Include="admin\css\img\puntos.png" />
+    <Content Include="admin\css\img\right.png" />
+    <Content Include="admin\css\img\right_blue_square.png" />
+    <Content Include="admin\css\img\rss.png" />
+    <Content Include="admin\css\img\search.png" />
+    <Content Include="admin\css\img\sombra_intranet.png" />
+    <Content Include="admin\css\img\sub_bullet.png" />
+    <Content Include="admin\css\style_cms.css" />
+    <Content Include="admin\images\azul.png" />
+    <Content Include="admin\images\naranja.png" />
+    <Content Include="admin\images\rojo.png" />
+    <Content Include="admin\js\sidr-package-1.0.0\jquery.sidr.min.js" />
+    <Content Include="admin\js\sidr-package-1.0.0\stylesheets\jquery.sidr.dark.css" />
+    <Content Include="admin\js\sidr-package-1.0.0\stylesheets\jquery.sidr.light.css" />
+    <None Include="admin\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="admin\RegistrarIncidente.aspx" />
+    <Content Include="admin\Scripts\jquery-1.4.1.js" />
+    <Content Include="admin\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="admin\Scripts\jquery.datetimepicker.js" />
+    <Content Include="admin\Scripts\jquery.js" />
+    <Content Include="admin\Scripts\jquery.tablesorter.min.js" />
+    <Content Include="admin\Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="admin\Scripts\jquery.ui.core.js" />
+    <Content Include="admin\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="admin\Scripts\jquery.ui.widget.js" />
+    <Content Include="admin\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="admin\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="admin\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="admin\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="admin\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="admin\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="admin\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="admin\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="admin\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="admin\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="admin\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="admin\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="admin\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="admin\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="admin\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="admin\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="admin\Styles\jquery.datetimepicker.css" />
+    <Content Include="admin\Styles\jquery.ui.accordion.css" />
+    <Content Include="admin\Styles\jquery.ui.all.css" />
+    <Content Include="admin\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="admin\Styles\jquery.ui.base.css" />
+    <Content Include="admin\Styles\jquery.ui.button.css" />
+    <Content Include="admin\Styles\jquery.ui.core.css" />
+    <Content Include="admin\Styles\jquery.ui.datepicker.css" />
+    <Content Include="admin\Styles\jquery.ui.dialog.css" />
+    <Content Include="admin\Styles\jquery.ui.progressbar.css" />
+    <Content Include="admin\Styles\jquery.ui.resizable.css" />
+    <Content Include="admin\Styles\jquery.ui.selectable.css" />
+    <Content Include="admin\Styles\jquery.ui.slider.css" />
+    <Content Include="admin\Styles\jquery.ui.tabs.css" />
+    <Content Include="admin\Styles\jquery.ui.theme.css" />
+    <Content Include="admin\Styles\Site.css" />
+    <Content Include="Alerta\ActualizarAlerta.aspx" />
+    <Content Include="Alerta\AdministrarElementoClave.aspx" />
+    <Content Include="Alerta\Administrador.aspx" />
+    <Content Include="Alerta\AdministrarSistemaQA.aspx" />
+    <Content Include="Alerta\registrarSistemaQA.aspx" />
+    <Content Include="Alerta\css\img\asc.gif" />
+    <Content Include="Alerta\css\img\bg-wrapper-blue.png" />
+    <Content Include="Alerta\css\img\bg.gif" />
+    <Content Include="Alerta\css\img\blank.gif" />
+    <Content Include="Alerta\css\img\boton_gmd.png" />
+    <Content Include="Alerta\css\img\bullet.png" />
+    <Content Include="Alerta\css\img\bullet1.png" />
+    <Content Include="Alerta\css\img\camera.png" />
+    <Content Include="Alerta\css\img\cuadraditos.jpg" />
+    <Content Include="Alerta\css\img\desc.gif" />
+    <Content Include="Alerta\css\img\descarga.jpg" />
+    <Content Include="Alerta\css\img\enlace.jpg" />
+    <Content Include="Alerta\css\img\enlace.png" />
+    <Content Include="Alerta\css\img\excel.png" />
+    <Content Include="Alerta\css\img\fancybox_close.png" />
+    <Content Include="Alerta\css\img\fancybox_close2.png" />
+    <Content Include="Alerta\css\img\fancybox_loading.gif" />
+    <Content Include="Alerta\css\img\fancybox_next.png" />
+    <Content Include="Alerta\css\img\fancybox_overlay.png" />
+    <Content Include="Alerta\css\img\fancybox_prev.png" />
+    <Content Include="Alerta\css\img\fancybox_prev11.png" />
+    <Content Include="Alerta\css\img\fancybox_sprite.png" />
+    <Content Include="Alerta\css\img\flecha_galeria.png" />
+    <Content Include="Alerta\css\img\graf1.jpg" />
+    <Content Include="Alerta\css\img\graf2.png" />
+    <Content Include="Alerta\css\img\left.png" />
+    <Content Include="Alerta\css\img\lines.png" />
+    <Content Include="Alerta\css\img\link.jpg" />
+    <Content Include="Alerta\css\img\link2.png" />
+    <Content Include="Alerta\css\img\loading.gif" />
+    <Content Include="Alerta\css\img\loadingAnimation.gif" />
+    <Content Include="Alerta\css\img\novedad1.jpg" />
+    <Content Include="Alerta\css\img\pdf.png" />
+    <Content Include="Alerta\css\img\puntos.png" />
+    <Content Include="Alerta\css\img\right.png" />
+    <Content Include="Alerta\css\img\right_blue_square.png" />
+    <Content Include="Alerta\css\img\rss.png" />
+    <Content Include="Alerta\css\img\search.png" />
+    <Content Include="Alerta\css\img\sombra_intranet.png" />
+    <Content Include="Alerta\css\img\sub_bullet.png" />
+    <Content Include="Alerta\css\style_cms.css" />
+    <None Include="Alerta\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Alerta\Default.aspx" />
+    <Content Include="Alerta\EvaluacionAlertaPop.aspx" />
+    <Content Include="Alerta\images\cabecera.gif" />
+    <Content Include="Alerta\images\carga.gif" />
+    <Content Include="Alerta\login_Alertas.aspx" />
+    <Content Include="Alerta\logout.aspx" />
+    <Content Include="Alerta\RegistrarAlerta.aspx" />
+    <Content Include="Alerta\registrarElementoClave.aspx" />
+    <Content Include="Alerta\ReporteAlerta.aspx" />
+    <Content Include="Alerta\ReportePlanAccion.aspx" />
+    <Content Include="Alerta\Scripts\jquery-1.4.1.js" />
+    <Content Include="Alerta\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Alerta\Scripts\jquery.datetimepicker.js" />
+    <Content Include="Alerta\Scripts\jquery.js" />
+    <Content Include="Alerta\Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Alerta\Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="Alerta\Scripts\jquery.ui.core.js" />
+    <Content Include="Alerta\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="Alerta\Scripts\jquery.ui.widget.js" />
+    <Content Include="Alerta\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Alerta\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Alerta\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Alerta\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Alerta\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Alerta\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Alerta\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Alerta\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Alerta\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Alerta\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Alerta\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Alerta\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Alerta\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Alerta\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Alerta\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Alerta\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="Alerta\Styles\jquery.datetimepicker.css" />
+    <Content Include="Alerta\Styles\jquery.ui.accordion.css" />
+    <Content Include="Alerta\Styles\jquery.ui.all.css" />
+    <Content Include="Alerta\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="Alerta\Styles\jquery.ui.base.css" />
+    <Content Include="Alerta\Styles\jquery.ui.button.css" />
+    <Content Include="Alerta\Styles\jquery.ui.core.css" />
+    <Content Include="Alerta\Styles\jquery.ui.datepicker.css" />
+    <Content Include="Alerta\Styles\jquery.ui.dialog.css" />
+    <Content Include="Alerta\Styles\jquery.ui.progressbar.css" />
+    <Content Include="Alerta\Styles\jquery.ui.resizable.css" />
+    <Content Include="Alerta\Styles\jquery.ui.selectable.css" />
+    <Content Include="Alerta\Styles\jquery.ui.slider.css" />
+    <Content Include="Alerta\Styles\jquery.ui.tabs.css" />
+    <Content Include="Alerta\Styles\jquery.ui.theme.css" />
+    <Content Include="Alerta\Styles\Site.css" />
+    <Content Include="Comportamiento\css\img\asc.gif" />
+    <Content Include="Comportamiento\css\img\bg-wrapper-blue.png" />
+    <Content Include="Comportamiento\css\img\bg.gif" />
+    <Content Include="Comportamiento\css\img\blank.gif" />
+    <Content Include="Comportamiento\css\img\boton_gmd.png" />
+    <Content Include="Comportamiento\css\img\bullet.png" />
+    <Content Include="Comportamiento\css\img\bullet1.png" />
+    <Content Include="Comportamiento\css\img\camera.png" />
+    <Content Include="Comportamiento\css\img\cuadraditos.jpg" />
+    <Content Include="Comportamiento\css\img\desc.gif" />
+    <Content Include="Comportamiento\css\img\descarga.jpg" />
+    <Content Include="Comportamiento\css\img\enlace.jpg" />
+    <Content Include="Comportamiento\css\img\enlace.png" />
+    <Content Include="Comportamiento\css\img\excel.png" />
+    <Content Include="Comportamiento\css\img\fancybox_close.png" />
+    <Content Include="Comportamiento\css\img\fancybox_close2.png" />
+    <Content Include="Comportamiento\css\img\fancybox_loading.gif" />
+    <Content Include="Comportamiento\css\img\fancybox_next.png" />
+    <Content Include="Comportamiento\css\img\fancybox_overlay.png" />
+    <Content Include="Comportamiento\css\img\fancybox_prev.png" />
+    <Content Include="Comportamiento\css\img\fancybox_prev11.png" />
+    <Content Include="Comportamiento\css\img\fancybox_sprite.png" />
+    <Content Include="Comportamiento\css\img\flecha_galeria.png" />
+    <Content Include="Comportamiento\css\img\graf1.jpg" />
+    <Content Include="Comportamiento\css\img\graf2.png" />
+    <Content Include="Comportamiento\css\img\left.png" />
+    <Content Include="Comportamiento\css\img\lines.png" />
+    <Content Include="Comportamiento\css\img\link.jpg" />
+    <Content Include="Comportamiento\css\img\link2.png" />
+    <Content Include="Comportamiento\css\img\loading.gif" />
+    <Content Include="Comportamiento\css\img\loadingAnimation.gif" />
+    <Content Include="Comportamiento\css\img\novedad1.jpg" />
+    <Content Include="Comportamiento\css\img\pdf.png" />
+    <Content Include="Comportamiento\css\img\puntos.png" />
+    <Content Include="Comportamiento\css\img\right.png" />
+    <Content Include="Comportamiento\css\img\right_blue_square.png" />
+    <Content Include="Comportamiento\css\img\rss.png" />
+    <Content Include="Comportamiento\css\img\search.png" />
+    <Content Include="Comportamiento\css\img\sombra_intranet.png" />
+    <Content Include="Comportamiento\css\img\sub_bullet.png" />
+    <Content Include="Comportamiento\css\style_cms.css" />
+    <Content Include="Comportamiento\Default.aspx" />
+    <Content Include="Comportamiento\js\sidr-package-1.0.0\jquery.sidr.min.js" />
+    <Content Include="Comportamiento\js\sidr-package-1.0.0\stylesheets\jquery.sidr.dark.css" />
+    <Content Include="Comportamiento\js\sidr-package-1.0.0\stylesheets\jquery.sidr.light.css" />
+    <Content Include="Comportamiento\login_incidentes.aspx" />
+    <Content Include="Comportamiento\logout.aspx" />
+    <Content Include="Comportamiento\prueba.aspx" />
+    <Content Include="Comportamiento\RegistrarComportamiento.aspx" />
+    <Content Include="Alerta\AdminMaster.Master" />
+    <Content Include="Alerta\css\img\vssver2.scc" />
+    <Content Include="Auditoria\AdminMaster.Master" />
+    <Content Include="Auditoria\css\img\vssver2.scc" />
+    <None Include="Comportamiento\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Comportamiento\registrarFormato.aspx" />
+    <Content Include="Comportamiento\registrarSubCategorias.aspx" />
+    <Content Include="Comportamiento\ReporteComportamiento.aspx" />
+    <Content Include="Comportamiento\Scripts\jquery-1.4.1.js" />
+    <Content Include="Comportamiento\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Comportamiento\Scripts\jquery.datetimepicker.js" />
+    <Content Include="Comportamiento\Scripts\jquery.js" />
+    <Content Include="Comportamiento\Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Comportamiento\Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="Comportamiento\Scripts\jquery.ui.core.js" />
+    <Content Include="Comportamiento\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="Comportamiento\Scripts\jquery.ui.widget.js" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Comportamiento\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Comportamiento\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Comportamiento\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Comportamiento\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Comportamiento\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Comportamiento\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Comportamiento\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Comportamiento\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Comportamiento\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="Comportamiento\Styles\jquery.datetimepicker.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.accordion.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.all.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.base.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.button.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.core.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.datepicker.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.dialog.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.progressbar.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.resizable.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.selectable.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.slider.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.tabs.css" />
+    <Content Include="Comportamiento\Styles\jquery.ui.theme.css" />
+    <Content Include="Comportamiento\Styles\Site.css" />
+    <Content Include="css\acordion.css" />
+    <Content Include="css\custom_inputs.css" />
+    <Content Include="css\images\help.gif" />
+    <Content Include="css\images\important.gif" />
+    <Content Include="css\images\info.gif" />
+    <Content Include="css\images\title.gif" />
+    <Content Include="css\img\cal.png" />
+    <Content Include="css\img\calendario.png" />
+    <Content Include="css\jquery.alerts.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style_control.css" />
+    <Content Include="css\style_ie.css" />
+    <Content Include="css\style_mobile.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\cabecera.gif" />
+    <Content Include="Images\cabecera.png" />
+    <Content Include="Images\fondo_4.png" />
+    <Content Include="Images\help.gif" />
+    <Content Include="Images\important.gif" />
+    <Content Include="Images\info.gif" />
+    <Content Include="Images\pg_logo.gif" />
+    <Content Include="Images\smallfondo_4.png" />
+    <Content Include="Images\title.gif" />
+    <Content Include="include\menu_top.inc.aspx" />
+    <Content Include="Login_mobile.aspx" />
+    <Content Include="RRHH\Default.aspx" />
+    <Content Include="RRHH\js\sidr-package-1.0.0\jquery.sidr.min.js" />
+    <Content Include="RRHH\js\sidr-package-1.0.0\stylesheets\jquery.sidr.dark.css" />
+    <Content Include="RRHH\js\sidr-package-1.0.0\stylesheets\jquery.sidr.light.css" />
+    <Content Include="RRHH\login_incidentes.aspx" />
+    <Content Include="Novedades\AdminMaster.Master" />
+    <Content Include="Novedades\Scripts\langs\readme.md" />
+    <Content Include="Novedades\Scripts\skins\lightgray\AbsoluteLayout.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Animations.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Arrows.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Button.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ButtonGroup.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Checkbox.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ColorBox.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ColorButton.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ColorPicker.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ComboBox.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Container.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Content.Inline.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Content.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Content.Objects.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\CropRect.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\FieldSet.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\FitLayout.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\FloatPanel.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\FlowLayout.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Novedades\Scripts\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Icons.Ie7.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Icons.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Iframe.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ImagePanel.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\InfoBox.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Label.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ListBox.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Menu.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\MenuBar.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\MenuButton.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\MenuItem.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Mixins.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Notification.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Panel.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Path.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Progress.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Radio.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Reset.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ResizeHandle.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Scrollable.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\SelectBox.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Sidebar.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\skin.dev.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\skin.ie7.dev.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\skin.ie7.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\skin.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Slider.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Spacer.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\SplitButton.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\StackLayout.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\TabPanel.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\TextBox.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Throbber.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\TinyMCE.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\ToolTip.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Variables.less" />
+    <Content Include="Novedades\Scripts\skins\lightgray\Window.less" />
+    <Content Include="Indicadores\css\img\vssver2.scc" />
+    <Content Include="Indicadores\js\sidr-package-1.0.0\component.json" />
+    <Content Include="Indicadores\js\sidr-package-1.0.0\README.md" />
+    <Content Include="LUPs\AdminMaster.Master" />
+    <Content Include="packages.config" />
+    <None Include="RRHH\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="RRHH\Scripts\jquery-1.4.1.js" />
+    <Content Include="RRHH\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="RRHH\Scripts\jquery.datetimepicker.js" />
+    <Content Include="RRHH\Scripts\jquery.js" />
+    <Content Include="RRHH\Scripts\jquery.tablesorter.min.js" />
+    <Content Include="RRHH\Scripts\jquery.tablesorter.pager.js" />
+    <Content Include="RRHH\Scripts\jquery.ui.core.js" />
+    <Content Include="RRHH\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="RRHH\Scripts\jquery.ui.widget.js" />
+    <Content Include="RRHH\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="RRHH\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="RRHH\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="RRHH\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="RRHH\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="RRHH\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="RRHH\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="RRHH\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="RRHH\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="RRHH\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="RRHH\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="RRHH\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="RRHH\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="RRHH\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="RRHH\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="RRHH\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="RRHH\Styles\jquery.datetimepicker.css" />
+    <Content Include="RRHH\Styles\jquery.ui.accordion.css" />
+    <Content Include="RRHH\Styles\jquery.ui.all.css" />
+    <Content Include="RRHH\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="RRHH\Styles\jquery.ui.base.css" />
+    <Content Include="RRHH\Styles\jquery.ui.button.css" />
+    <Content Include="RRHH\Styles\jquery.ui.core.css" />
+    <Content Include="RRHH\Styles\jquery.ui.datepicker.css" />
+    <Content Include="RRHH\Styles\jquery.ui.dialog.css" />
+    <Content Include="RRHH\Styles\jquery.ui.progressbar.css" />
+    <Content Include="RRHH\Styles\jquery.ui.resizable.css" />
+    <Content Include="RRHH\Styles\jquery.ui.selectable.css" />
+    <Content Include="RRHH\Styles\jquery.ui.slider.css" />
+    <Content Include="RRHH\Styles\jquery.ui.tabs.css" />
+    <Content Include="RRHH\Styles\jquery.ui.theme.css" />
+    <Content Include="RRHH\Styles\Site.css" />
+    <Content Include="RRHH\WebForm1.aspx" />
+    <Content Include="Scorecard.aspx" />
+    <Content Include="Scripts\html5.js" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery.alerts.js" />
+    <Content Include="Scripts\material-modal.js" />
+    <Content Include="sorter\dist\css\dragtable.mod.min.css" />
+    <Content Include="sorter\dist\css\filter.formatter.min.css" />
+    <Content Include="sorter\dist\css\images\black-asc.gif" />
+    <Content Include="sorter\dist\css\images\black-desc.gif" />
+    <Content Include="sorter\dist\css\images\black-unsorted.gif" />
+    <Content Include="sorter\dist\css\images\bootstrap-black-unsorted.png" />
+    <Content Include="sorter\dist\css\images\bootstrap-white-unsorted.png" />
+    <Content Include="sorter\dist\css\images\dragtable-handle.png" />
+    <Content Include="sorter\dist\css\images\dragtable-handle.svg" />
+    <Content Include="sorter\dist\css\images\dropbox-asc-hovered.png" />
+    <Content Include="sorter\dist\css\images\dropbox-asc.png" />
+    <Content Include="sorter\dist\css\images\dropbox-desc-hovered.png" />
+    <Content Include="sorter\dist\css\images\dropbox-desc.png" />
+    <Content Include="sorter\dist\css\images\first.png" />
+    <Content Include="sorter\dist\css\images\green-asc.gif" />
+    <Content Include="sorter\dist\css\images\green-desc.gif" />
+    <Content Include="sorter\dist\css\images\green-header.gif" />
+    <Content Include="sorter\dist\css\images\green-unsorted.gif" />
+    <Content Include="sorter\dist\css\images\ice-asc.gif" />
+    <Content Include="sorter\dist\css\images\ice-desc.gif" />
+    <Content Include="sorter\dist\css\images\ice-unsorted.gif" />
+    <Content Include="sorter\dist\css\images\last.png" />
+    <Content Include="sorter\dist\css\images\loading.gif" />
+    <Content Include="sorter\dist\css\images\metro-black-asc.png" />
+    <Content Include="sorter\dist\css\images\metro-black-desc.png" />
+    <Content Include="sorter\dist\css\images\metro-loading.gif" />
+    <Content Include="sorter\dist\css\images\metro-unsorted.png" />
+    <Content Include="sorter\dist\css\images\metro-white-asc.png" />
+    <Content Include="sorter\dist\css\images\metro-white-desc.png" />
+    <Content Include="sorter\dist\css\images\next.png" />
+    <Content Include="sorter\dist\css\images\prev.png" />
+    <Content Include="sorter\dist\css\images\white-asc.gif" />
+    <Content Include="sorter\dist\css\images\white-desc.gif" />
+    <Content Include="sorter\dist\css\images\white-unsorted.gif" />
+    <Content Include="sorter\dist\css\jquery.tablesorter.pager.min.css" />
+    <Content Include="sorter\dist\css\theme.blackice.min.css" />
+    <Content Include="sorter\dist\css\theme.blue.min.css" />
+    <Content Include="sorter\dist\css\theme.bootstrap.min.css" />
+    <Content Include="sorter\dist\css\theme.bootstrap_2.min.css" />
+    <Content Include="sorter\dist\css\theme.dark.min.css" />
+    <Content Include="sorter\dist\css\theme.default.min.css" />
+    <Content Include="sorter\dist\css\theme.dropbox.min.css" />
+    <Content Include="sorter\dist\css\theme.green.min.css" />
+    <Content Include="sorter\dist\css\theme.grey.min.css" />
+    <Content Include="sorter\dist\css\theme.ice.min.css" />
+    <Content Include="sorter\dist\css\theme.jui.min.css" />
+    <Content Include="sorter\dist\css\theme.metro-dark.min.css" />
+    <Content Include="sorter\dist\js\extras\jquery.dragtable.mod.min.js" />
+    <Content Include="sorter\dist\js\extras\jquery.metadata.min.js" />
+    <Content Include="sorter\dist\js\extras\jquery.tablesorter.pager.min.js" />
+    <Content Include="sorter\dist\js\extras\semver-mod.min.js" />
+    <Content Include="sorter\dist\js\jquery.tablesorter.combined.js" />
+    <Content Include="sorter\dist\js\jquery.tablesorter.combined.min.js" />
+    <Content Include="sorter\dist\js\jquery.tablesorter.js" />
+    <Content Include="sorter\dist\js\jquery.tablesorter.min.js" />
+    <Content Include="sorter\dist\js\jquery.tablesorter.widgets.js" />
+    <Content Include="sorter\dist\js\jquery.tablesorter.widgets.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-date-extract.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-date-iso8601.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-date-month.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-date-range.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-date-two-digit-year.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-date-weekday.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-date.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-duration.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-feet-inch-fraction.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-file-type.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-globalize.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-huge-numbers.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-ignore-articles.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-image.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-input-select.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-metric.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-named-numbers.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-network.min.js" />
+    <Content Include="sorter\dist\js\parsers\parser-roman.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-alignChar.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-build-table.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-chart.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-columns.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-columnSelector.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-cssStickyHeaders.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-editable.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-filter-formatter-html5.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-filter-formatter-jui.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-filter-formatter-select2.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-filter-type-insideRange.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-filter.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-formatter.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-grouping.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-headerTitles.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-lazyload.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-math.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-output.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-pager.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-print.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-reflow.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-repeatheaders.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-resizable.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-saveSort.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-scroller.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-sort2Hash.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-sortTbodies.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-staticRow.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-stickyHeaders.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-storage.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-toggle.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-uitheme.min.js" />
+    <Content Include="sorter\dist\js\widgets\widget-view.min.js" />
+    <Content Include="sorter\docs\assets\ajax-content.html" />
+    <Content Include="sorter\docs\assets\build.txt" />
+    <Content Include="sorter\docs\css\bootstrap-v2.min.css" />
+    <Content Include="sorter\docs\css\bootstrap.min.css" />
+    <Content Include="sorter\docs\css\images\glyphicons-halflings-white.png" />
+    <Content Include="sorter\docs\css\images\glyphicons-halflings.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="sorter\docs\css\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="sorter\docs\css\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="sorter\docs\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="sorter\docs\css\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="sorter\docs\css\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="sorter\docs\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="sorter\docs\css\jq.css" />
+    <Content Include="sorter\docs\css\jquery-ui.min.css" />
+    <Content Include="sorter\docs\css\magnific-popup.css" />
+    <Content Include="sorter\docs\css\menu.css" />
+    <Content Include="sorter\docs\css\prettify.css" />
+    <Content Include="sorter\docs\css\rangeslider.css" />
+    <Content Include="sorter\docs\css\select2-3.4.6.min.css" />
+    <Content Include="sorter\docs\css\select2-spinner.gif" />
+    <Content Include="sorter\docs\css\select2.png" />
+    <Content Include="sorter\docs\css\select2x2.png" />
+    <Content Include="sorter\docs\css\tipsy.css" />
+    <Content Include="sorter\docs\example-add-rows.html" />
+    <Content Include="sorter\docs\example-ajax.html" />
+    <Content Include="sorter\docs\example-apply-widget.html" />
+    <Content Include="sorter\docs\example-child-rows-filtered.html" />
+    <Content Include="sorter\docs\example-child-rows.html" />
+    <Content Include="sorter\docs\example-colspan.html" />
+    <Content Include="sorter\docs\example-css-highlighting.html" />
+    <Content Include="sorter\docs\example-dragtable.html" />
+    <Content Include="sorter\docs\example-empty-table.html" />
+    <Content Include="sorter\docs\example-extending-defaults.html" />
+    <Content Include="sorter\docs\example-extractors-parsers.html" />
+    <Content Include="sorter\docs\example-header-column-span.html" />
+    <Content Include="sorter\docs\example-locale-sort.html" />
+    <Content Include="sorter\docs\example-meta-headers.html" />
+    <Content Include="sorter\docs\example-meta-parsers.html" />
+    <Content Include="sorter\docs\example-meta-sort-list.html" />
+    <Content Include="sorter\docs\example-method-sortreset.html" />
+    <Content Include="sorter\docs\example-multiple-tbodies.html" />
+    <Content Include="sorter\docs\example-option-custom-sort.html" />
+    <Content Include="sorter\docs\example-option-date-format.html" />
+    <Content Include="sorter\docs\example-option-debug.html" />
+    <Content Include="sorter\docs\example-option-delay-init.html" />
+    <Content Include="sorter\docs\example-option-digits.html" />
+    <Content Include="sorter\docs\example-option-render-header.html" />
+    <Content Include="sorter\docs\example-option-render-template.html" />
+    <Content Include="sorter\docs\example-option-selectorsort.html" />
+    <Content Include="sorter\docs\example-option-show-processing.html" />
+    <Content Include="sorter\docs\example-option-sort-append.html" />
+    <Content Include="sorter\docs\example-option-sort-empty.html" />
+    <Content Include="sorter\docs\example-option-sort-force.html" />
+    <Content Include="sorter\docs\example-option-sort-key.html" />
+    <Content Include="sorter\docs\example-option-sort-list.html" />
+    <Content Include="sorter\docs\example-option-sort-order.html" />
+    <Content Include="sorter\docs\example-option-sortreset-sortrestart.html" />
+    <Content Include="sorter\docs\example-option-text-extraction.html" />
+    <Content Include="sorter\docs\example-option-textsorter-semver.html" />
+    <Content Include="sorter\docs\example-option-theme-metro-style.html" />
+    <Content Include="sorter\docs\example-options-headers-digits-strings.html" />
+    <Content Include="sorter\docs\example-options-headers-locked.html" />
+    <Content Include="sorter\docs\example-options-headers-order.html" />
+    <Content Include="sorter\docs\example-options-headers-parser.html" />
+    <Content Include="sorter\docs\example-options-headers.html" />
+    <Content Include="sorter\docs\example-pager-ajax.html" />
+    <Content Include="sorter\docs\example-pager-filtered.html" />
+    <Content Include="sorter\docs\example-pager.html" />
+    <Content Include="sorter\docs\example-parsers-advanced.html" />
+    <Content Include="sorter\docs\example-parsers-class-name.html" />
+    <Content Include="sorter\docs\example-parsers-date-range.html" />
+    <Content Include="sorter\docs\example-parsers-dates.html" />
+    <Content Include="sorter\docs\example-parsers-duration.html" />
+    <Content Include="sorter\docs\example-parsers-feet-inch-fraction.html" />
+    <Content Include="sorter\docs\example-parsers-file-type.html" />
+    <Content Include="sorter\docs\example-parsers-globalize.html" />
+    <Content Include="sorter\docs\example-parsers-ignore-articles.html" />
+    <Content Include="sorter\docs\example-parsers-ip-address.html" />
+    <Content Include="sorter\docs\example-parsers-jquery-data.html" />
+    <Content Include="sorter\docs\example-parsers-metric.html" />
+    <Content Include="sorter\docs\example-parsers-named-numbers.html" />
+    <Content Include="sorter\docs\example-parsers-roman.html" />
+    <Content Include="sorter\docs\example-parsers.html" />
+    <Content Include="sorter\docs\example-trigger-sort.html" />
+    <Content Include="sorter\docs\example-triggers.html" />
+    <Content Include="sorter\docs\example-update-all.html" />
+    <Content Include="sorter\docs\example-update-cell.html" />
+    <Content Include="sorter\docs\example-widget-align-character.html" />
+    <Content Include="sorter\docs\example-widget-bootstrap-theme-v2.html" />
+    <Content Include="sorter\docs\example-widget-bootstrap-theme.html" />
+    <Content Include="sorter\docs\example-widget-build-table.html" />
+    <Content Include="sorter\docs\example-widget-chart.html" />
+    <Content Include="sorter\docs\example-widget-column-selector.html" />
+    <Content Include="sorter\docs\example-widget-columns.html" />
+    <Content Include="sorter\docs\example-widget-css-sticky-header.html" />
+    <Content Include="sorter\docs\example-widget-editable.html" />
+    <Content Include="sorter\docs\example-widget-filter-any-match.html" />
+    <Content Include="sorter\docs\example-widget-filter-childrows.html" />
+    <Content Include="sorter\docs\example-widget-filter-custom-search.html" />
+    <Content Include="sorter\docs\example-widget-filter-custom-search2.html" />
+    <Content Include="sorter\docs\example-widget-filter-custom.html" />
+    <Content Include="sorter\docs\example-widget-filter-external-inputs.html" />
+    <Content Include="sorter\docs\example-widget-filter-formatter-1.html" />
+    <Content Include="sorter\docs\example-widget-filter-formatter-2.html" />
+    <Content Include="sorter\docs\example-widget-filter-formatter-select2.html" />
+    <Content Include="sorter\docs\example-widget-filter-selectmenu.html" />
+    <Content Include="sorter\docs\example-widget-filter.html" />
+    <Content Include="sorter\docs\example-widget-formatter.html" />
+    <Content Include="sorter\docs\example-widget-grouping-filter-childrows.html" />
+    <Content Include="sorter\docs\example-widget-grouping.html" />
+    <Content Include="sorter\docs\example-widget-header-titles.html" />
+    <Content Include="sorter\docs\example-widget-lazyload.html" />
+    <Content Include="sorter\docs\example-widget-math.html" />
+    <Content Include="sorter\docs\example-widget-output.html" />
+    <Content Include="sorter\docs\example-widget-pager-ajax.html" />
+    <Content Include="sorter\docs\example-widget-pager.html" />
+    <Content Include="sorter\docs\example-widget-print.html" />
+    <Content Include="sorter\docs\example-widget-reflow.html" />
+    <Content Include="sorter\docs\example-widget-reflow1.html" />
+    <Content Include="sorter\docs\example-widget-reflow2.html" />
+    <Content Include="sorter\docs\example-widget-reflow3.html" />
+    <Content Include="sorter\docs\example-widget-resizable.html" />
+    <Content Include="sorter\docs\example-widget-savesort.html" />
+    <Content Include="sorter\docs\example-widget-scroller.html" />
+    <Content Include="sorter\docs\example-widget-sort-tbodies.html" />
+    <Content Include="sorter\docs\example-widget-sort-to-hash.html" />
+    <Content Include="sorter\docs\example-widget-static-row.html" />
+    <Content Include="sorter\docs\example-widget-sticky-header.html" />
+    <Content Include="sorter\docs\example-widget-toggle-tablesorter.html" />
+    <Content Include="sorter\docs\example-widget-ui-theme.html" />
+    <Content Include="sorter\docs\example-widget-view.html" />
+    <Content Include="sorter\docs\example-widget-zebra.html" />
+    <Content Include="sorter\docs\example-widgets.html" />
+    <Content Include="sorter\docs\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="sorter\docs\img\external.png" />
+    <Content Include="sorter\docs\img\grid-default-thumb.png" />
+    <Content Include="sorter\docs\img\link.png" />
+    <Content Include="sorter\docs\img\new-product-banner.png" />
+    <Content Include="sorter\docs\img\sale-banner.png" />
+    <Content Include="sorter\docs\img\screens-blue.png" />
+    <Content Include="sorter\docs\img\screens.png" />
+    <Content Include="sorter\docs\index.html" />
+    <Content Include="sorter\docs\js\bootstrap.min.js" />
+    <Content Include="sorter\docs\js\chili\jquery.chili-2.2.js" />
+    <Content Include="sorter\docs\js\chili\recipes.js" />
+    <Content Include="sorter\docs\js\demo-build-table.js" />
+    <Content Include="sorter\docs\js\docs.js" />
+    <Content Include="sorter\docs\js\jquery-1.2.6.min.js" />
+    <Content Include="sorter\docs\js\jquery-1.4.4.min.js" />
+    <Content Include="sorter\docs\js\jquery-3.0.0-beta1.js" />
+    <Content Include="sorter\docs\js\jquery-latest.min.js" />
+    <Content Include="sorter\docs\js\jquery-ui.min.js" />
+    <Content Include="sorter\docs\js\jquery.jui_theme_switch.min.js" />
+    <Content Include="sorter\docs\js\jquery.magnific-popup.min.js" />
+    <Content Include="sorter\docs\js\jquery.tipsy.min.js" />
+    <Content Include="sorter\docs\js\prettify.js" />
+    <Content Include="sorter\docs\js\rangeslider.min.js" />
+    <Content Include="sorter\docs\js\search-ie.js" />
+    <Content Include="sorter\docs\js\search.js" />
+    <Content Include="sorter\docs\js\select2-3.4.6.min.js" />
+    <Content Include="sorter\docs\js\sugar.min.js" />
+    <Content Include="sorter\docs\themes.html" />
+    <Content Include="Triangulo.aspx" />
+    <Content Include="Trigger\ActualizarTrigger.aspx" />
+    <Content Include="Trigger\ActualizarTriggerPopUp.aspx" />
+    <Content Include="Trigger\Administrador.aspx" />
+    <Content Include="Trigger\AdministrarRiesgo.aspx" />
+    <Content Include="Trigger\css\style_cms.css" />
+    <Content Include="Trigger\Default.aspx" />
+    <Content Include="Trigger\images\cabecera.gif" />
+    <Content Include="Trigger\images\carga.gif" />
+    <Content Include="Trigger\AdminMaster.Master" />
+    <Content Include="RRHH\AdminMaster.Master" />
+    <Content Include="RRHH\css\img\vssver2.scc" />
+    <Content Include="RRHH\js\sidr-package-1.0.0\component.json" />
+    <Content Include="RRHH\js\sidr-package-1.0.0\README.md" />
+    <Content Include="sorter\dist\css\less\bootstrap.less" />
+    <Content Include="sorter\dist\css\less\metro.less" />
+    <Content Include="sorter\dist\css\less\theme.less" />
+    <Content Include="sorter\docs\assets\build.json" />
+    <Content Include="sorter\docs\assets\City0.json" />
+    <Content Include="sorter\docs\assets\City1.json" />
+    <Content Include="sorter\docs\assets\City2.json" />
+    <Content Include="sorter\docs\assets\City3.json" />
+    <Content Include="sorter\docs\assets\theme_switcher.json" />
+    <Content Include="sorter\docs\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="sorter\docs\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="sorter\docs\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="sorter\docs\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Trigger\login_Trigger.aspx" />
+    <Content Include="Trigger\logout.aspx" />
+    <Content Include="Trigger\RegistrarTrigger.aspx" />
+    <Content Include="Trigger\ReporteTrigger.aspx" />
+    <Content Include="Trigger\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Trigger\Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Trigger\Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Trigger\Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Trigger\Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Trigger\Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Trigger\Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Trigger\Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Trigger\Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Trigger\Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Trigger\Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Trigger\Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Trigger\Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Trigger\Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Trigger\Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Trigger\Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Trigger\Styles\jquery-ui-1.8.11.custom.css" />
+    <Content Include="Trigger\Styles\jquery.datetimepicker.css" />
+    <Content Include="Trigger\Styles\jquery.ui.accordion.css" />
+    <Content Include="Trigger\Styles\jquery.ui.all.css" />
+    <Content Include="Trigger\Styles\jquery.ui.autocomplete.css" />
+    <Content Include="Trigger\Styles\jquery.ui.base.css" />
+    <Content Include="Trigger\Styles\jquery.ui.button.css" />
+    <Content Include="Trigger\Styles\jquery.ui.core.css" />
+    <Content Include="Trigger\Styles\jquery.ui.datepicker.css" />
+    <Content Include="Trigger\Styles\jquery.ui.dialog.css" />
+    <Content Include="Trigger\Styles\jquery.ui.progressbar.css" />
+    <Content Include="Trigger\Styles\jquery.ui.resizable.css" />
+    <Content Include="Trigger\Styles\jquery.ui.selectable.css" />
+    <Content Include="Trigger\Styles\jquery.ui.slider.css" />
+    <Content Include="Trigger\Styles\jquery.ui.tabs.css" />
+    <Content Include="Trigger\Styles\jquery.ui.theme.css" />
+    <Content Include="Trigger\Styles\Site.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\ActualizarDepartamento.aspx.cs">
+      <DependentUpon>ActualizarDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ActualizarDepartamento.aspx.designer.cs">
+      <DependentUpon>ActualizarDepartamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ActualizarFuncionarioPop.aspx.cs">
+      <DependentUpon>ActualizarFuncionarioPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ActualizarFuncionarioPop.aspx.designer.cs">
+      <DependentUpon>ActualizarFuncionarioPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdministracionFuncionarios.aspx.cs">
+      <DependentUpon>AdministracionFuncionarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdministracionFuncionarios.aspx.designer.cs">
+      <DependentUpon>AdministracionFuncionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\EvaluarIncidente.aspx.cs">
+      <DependentUpon>EvaluarIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\EvaluarIncidente.aspx.designer.cs">
+      <DependentUpon>EvaluarIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarTipoDanio.aspx.cs">
+      <DependentUpon>registrarTipoDanio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarTipoDanio.aspx.designer.cs">
+      <DependentUpon>registrarTipoDanio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarParteCuerpo.aspx.cs">
+      <DependentUpon>registrarParteCuerpo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarParteCuerpo.aspx.designer.cs">
+      <DependentUpon>registrarParteCuerpo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarArea.aspx.cs">
+      <DependentUpon>registrarArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarArea.aspx.designer.cs">
+      <DependentUpon>registrarArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarCausaInmediata.aspx.cs">
+      <DependentUpon>registrarCausaInmediata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarCausaInmediata.aspx.designer.cs">
+      <DependentUpon>registrarCausaInmediata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarCausaRaiz.aspx.cs">
+      <DependentUpon>registrarCausaRaiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarCausaRaiz.aspx.designer.cs">
+      <DependentUpon>registrarCausaRaiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarRiesgoInvolucrado.aspx.cs">
+      <DependentUpon>registrarRiesgoInvolucrado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarRiesgoInvolucrado.aspx.designer.cs">
+      <DependentUpon>registrarRiesgoInvolucrado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarCondicionInvolucrada.aspx.cs">
+      <DependentUpon>registrarCondicionInvolucrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarCondicionInvolucrada.aspx.designer.cs">
+      <DependentUpon>registrarCondicionInvolucrada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarEstatusOperacional.aspx.cs">
+      <DependentUpon>registrarEstatusOperacional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarEstatusOperacional.aspx.designer.cs">
+      <DependentUpon>registrarEstatusOperacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\registrarClasificacion.aspx.cs">
+      <DependentUpon>registrarClasificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registrarClasificacion.aspx.designer.cs">
+      <DependentUpon>registrarClasificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RegistrarFuncionarioPop.aspx.cs">
+      <DependentUpon>RegistrarFuncionarioPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RegistrarFuncionarioPop.aspx.designer.cs">
+      <DependentUpon>RegistrarFuncionarioPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TrianguloSeguridad.aspx.cs">
+      <DependentUpon>TrianguloSeguridad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TrianguloSeguridad.aspx.designer.cs">
+      <DependentUpon>TrianguloSeguridad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\registrarCriticidad.aspx.cs">
+      <DependentUpon>registrarCriticidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\registrarCriticidad.aspx.designer.cs">
+      <DependentUpon>registrarCriticidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\registrarGuardia.aspx.cs">
+      <DependentUpon>registrarGuardia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\registrarGuardia.aspx.designer.cs">
+      <DependentUpon>registrarGuardia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\registrarEventoQA.aspx.cs">
+      <DependentUpon>registrarEventoQA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\registrarEventoQA.aspx.designer.cs">
+      <DependentUpon>registrarEventoQA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\ReporteCumplimiento.aspx.cs">
+      <DependentUpon>ReporteCumplimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\ReporteCumplimiento.aspx.designer.cs">
+      <DependentUpon>ReporteCumplimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\ReporteEstadistica.aspx.cs">
+      <DependentUpon>ReporteEstadistica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\ReporteEstadistica.aspx.designer.cs">
+      <DependentUpon>ReporteEstadistica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\ActualizarAuditoria.aspx.cs">
+      <DependentUpon>ActualizarAuditoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\ActualizarAuditoria.aspx.designer.cs">
+      <DependentUpon>ActualizarAuditoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\ActualizarAuditoriaPop.aspx.cs">
+      <DependentUpon>ActualizarAuditoriaPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\ActualizarAuditoriaPop.aspx.designer.cs">
+      <DependentUpon>ActualizarAuditoriaPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\AdministrarPregunta.aspx.cs">
+      <DependentUpon>AdministrarPregunta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\AdministrarPregunta.aspx.designer.cs">
+      <DependentUpon>AdministrarPregunta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\AdministrarAuditoria.aspx.cs">
+      <DependentUpon>AdministrarAuditoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\AdministrarAuditoria.aspx.designer.cs">
+      <DependentUpon>AdministrarAuditoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\login_incidentes.aspx.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\login_incidentes.aspx.designer.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\RegistrarAuditoria.aspx.cs">
+      <DependentUpon>RegistrarAuditoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\RegistrarAuditoria.aspx.designer.cs">
+      <DependentUpon>RegistrarAuditoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\ReporteAuditoria.aspx.cs">
+      <DependentUpon>ReporteAuditoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\ReporteAuditoria.aspx.designer.cs">
+      <DependentUpon>ReporteAuditoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria\ReportePlanAccion.aspx.cs">
+      <DependentUpon>ReportePlanAccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auditoria\ReportePlanAccion.aspx.designer.cs">
+      <DependentUpon>ReportePlanAccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\registrarArea.aspx.cs">
+      <DependentUpon>registrarArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\registrarArea.aspx.designer.cs">
+      <DependentUpon>registrarArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\ActualizarEvaluacion.aspx.cs">
+      <DependentUpon>ActualizarEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\ActualizarEvaluacion.aspx.designer.cs">
+      <DependentUpon>ActualizarEvaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\ActualizarFuncionarioPop.aspx.cs">
+      <DependentUpon>ActualizarFuncionarioPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\ActualizarFuncionarioPop.aspx.designer.cs">
+      <DependentUpon>ActualizarFuncionarioPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\AdministracionFuncionarios.aspx.cs">
+      <DependentUpon>AdministracionFuncionarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\AdministracionFuncionarios.aspx.designer.cs">
+      <DependentUpon>AdministracionFuncionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\dsIndicadores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIndicadores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\login_incidentes.aspx.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\login_incidentes.aspx.designer.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\RegistrarEvaluacion.aspx.cs">
+      <DependentUpon>RegistrarEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\RegistrarEvaluacion.aspx.designer.cs">
+      <DependentUpon>RegistrarEvaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\RegistrarFuncionarioPop.aspx.cs">
+      <DependentUpon>RegistrarFuncionarioPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\RegistrarFuncionarioPop.aspx.designer.cs">
+      <DependentUpon>RegistrarFuncionarioPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\ReporteCurva.aspx.cs">
+      <DependentUpon>ReporteCurva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\ReporteCurva.aspx.designer.cs">
+      <DependentUpon>ReporteCurva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\ReporteIndicadores.aspx.cs">
+      <DependentUpon>ReporteIndicadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\ReporteIndicadores.aspx.designer.cs">
+      <DependentUpon>ReporteIndicadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\rptEvaluacionColegaAll.aspx.cs">
+      <DependentUpon>rptEvaluacionColegaAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\rptEvaluacionColegaAll.aspx.designer.cs">
+      <DependentUpon>rptEvaluacionColegaAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores\rptEvaluacionColega.aspx.cs">
+      <DependentUpon>rptEvaluacionColega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\rptEvaluacionColega.aspx.designer.cs">
+      <DependentUpon>rptEvaluacionColega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\ActualizarFuncionarioPop.aspx.cs">
+      <DependentUpon>ActualizarFuncionarioPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\ActualizarFuncionarioPop.aspx.designer.cs">
+      <DependentUpon>ActualizarFuncionarioPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\ActualizarLup.aspx.cs">
+      <DependentUpon>ActualizarLup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\ActualizarLup.aspx.designer.cs">
+      <DependentUpon>ActualizarLup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\ActualizarLupPop.aspx.cs">
+      <DependentUpon>ActualizarLupPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\ActualizarLupPop.aspx.designer.cs">
+      <DependentUpon>ActualizarLupPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\AdministracionFuncionarios.aspx.cs">
+      <DependentUpon>AdministracionFuncionarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\AdministracionFuncionarios.aspx.designer.cs">
+      <DependentUpon>AdministracionFuncionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\registrarCategoria.aspx.cs">
+      <DependentUpon>registrarCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\registrarCategoria.aspx.designer.cs">
+      <DependentUpon>registrarCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\registrarPilar.aspx.cs">
+      <DependentUpon>registrarPilar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\registrarPilar.aspx.designer.cs">
+      <DependentUpon>registrarPilar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\RegistrarFuncionarioPop.aspx.cs">
+      <DependentUpon>RegistrarFuncionarioPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\RegistrarFuncionarioPop.aspx.designer.cs">
+      <DependentUpon>RegistrarFuncionarioPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\RegistrarLup.aspx.cs">
+      <DependentUpon>RegistrarLup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\RegistrarLup.aspx.designer.cs">
+      <DependentUpon>RegistrarLup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\registrarResponsableCategoria.aspx.cs">
+      <DependentUpon>registrarResponsableCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\registrarResponsableCategoria.aspx.designer.cs">
+      <DependentUpon>registrarResponsableCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUPs\ReporteLups.aspx.cs">
+      <DependentUpon>ReporteLups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUPs\ReporteLups.aspx.designer.cs">
+      <DependentUpon>ReporteLups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Novedades\ActualizarNovedadesPop.aspx.cs">
+      <DependentUpon>ActualizarNovedadesPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Novedades\ActualizarNovedadesPop.aspx.designer.cs">
+      <DependentUpon>ActualizarNovedadesPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Novedades\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Novedades\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Novedades\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Novedades\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Novedades\login_Novedades.aspx.cs">
+      <DependentUpon>login_Novedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Novedades\login_Novedades.aspx.designer.cs">
+      <DependentUpon>login_Novedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrarResponsablePilar.aspx.cs">
+      <DependentUpon>registrarResponsablePilar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrarResponsablePilar.aspx.designer.cs">
+      <DependentUpon>registrarResponsablePilar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrarResponsable.aspx.cs">
+      <DependentUpon>registrarResponsable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrarResponsable.aspx.designer.cs">
+      <DependentUpon>registrarResponsable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlanPendiente.aspx.cs">
+      <DependentUpon>PlanPendiente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlanPendiente.aspx.designer.cs">
+      <DependentUpon>PlanPendiente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reconocimiento\Reconocimiento.aspx.cs">
+      <DependentUpon>Reconocimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reconocimiento\Reconocimiento.aspx.designer.cs">
+      <DependentUpon>Reconocimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reconocimiento\ReporteReconocimiento.aspx.cs">
+      <DependentUpon>ReporteReconocimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reconocimiento\ReporteReconocimiento.aspx.designer.cs">
+      <DependentUpon>ReporteReconocimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrarDepartamento.aspx.cs">
+      <DependentUpon>registrarDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrarDepartamento.aspx.designer.cs">
+      <DependentUpon>registrarDepartamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteSLT.aspx.cs">
+      <DependentUpon>ReporteSLT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteSLT.aspx.designer.cs">
+      <DependentUpon>ReporteSLT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\ActualizarDepartamento.aspx.cs">
+      <DependentUpon>ActualizarDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\ActualizarDepartamento.aspx.designer.cs">
+      <DependentUpon>ActualizarDepartamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ActualizarPlanInmediato.aspx.cs">
+      <DependentUpon>ActualizarPlanInmediato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ActualizarPlanInmediato.aspx.designer.cs">
+      <DependentUpon>ActualizarPlanInmediato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ActualizarPlanAccion.aspx.cs">
+      <DependentUpon>ActualizarPlanAccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ActualizarPlanAccion.aspx.designer.cs">
+      <DependentUpon>ActualizarPlanAccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ActualizarIncidente.aspx.cs">
+      <DependentUpon>ActualizarIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ActualizarIncidente.aspx.designer.cs">
+      <DependentUpon>ActualizarIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ControlTeam.aspx.cs">
+      <DependentUpon>ControlTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ControlTeam.aspx.designer.cs">
+      <DependentUpon>ControlTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\ControlTeam.aspx.cs">
+      <DependentUpon>ControlTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\ControlTeam.aspx.designer.cs">
+      <DependentUpon>ControlTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\func_grupo.aspx.cs">
+      <DependentUpon>func_grupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\func_grupo.aspx.designer.cs">
+      <DependentUpon>func_grupo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\PlanesPendientes.aspx.cs">
+      <DependentUpon>PlanesPendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\PlanesPendientes.aspx.designer.cs">
+      <DependentUpon>PlanesPendientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ReportePlanAccion.aspx.cs">
+      <DependentUpon>ReportePlanAccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ReportePlanAccion.aspx.designer.cs">
+      <DependentUpon>ReportePlanAccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ReporteEstadistica.aspx.cs">
+      <DependentUpon>ReporteEstadistica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ReporteEstadistica.aspx.designer.cs">
+      <DependentUpon>ReporteEstadistica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\EvaluacionIncidentePop.aspx.cs">
+      <DependentUpon>EvaluacionIncidentePop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\EvaluacionIncidentePop.aspx.designer.cs">
+      <DependentUpon>EvaluacionIncidentePop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login_incidentes.aspx.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\login_incidentes.aspx.designer.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RegistrarPlanAccion.aspx.cs">
+      <DependentUpon>RegistrarPlanAccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RegistrarPlanAccion.aspx.designer.cs">
+      <DependentUpon>RegistrarPlanAccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ReporteIncidente.aspx.cs">
+      <DependentUpon>ReporteIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ReporteIncidente.aspx.designer.cs">
+      <DependentUpon>ReporteIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ValidarIncidente.aspx.cs">
+      <DependentUpon>ValidarIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ValidarIncidente.aspx.designer.cs">
+      <DependentUpon>ValidarIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RegistrarIncidente.aspx.cs">
+      <DependentUpon>RegistrarIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RegistrarIncidente.aspx.designer.cs">
+      <DependentUpon>RegistrarIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\AdministrarElementoClave.aspx.cs">
+      <DependentUpon>AdministrarElementoClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\AdministrarElementoClave.aspx.designer.cs">
+      <DependentUpon>AdministrarElementoClave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\ActualizarAlerta.aspx.cs">
+      <DependentUpon>ActualizarAlerta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\ActualizarAlerta.aspx.designer.cs">
+      <DependentUpon>ActualizarAlerta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\AdministrarSistemaQA.aspx.cs">
+      <DependentUpon>AdministrarSistemaQA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\AdministrarSistemaQA.aspx.designer.cs">
+      <DependentUpon>AdministrarSistemaQA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\registrarSistemaQA.aspx.cs">
+      <DependentUpon>registrarSistemaQA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\registrarSistemaQA.aspx.designer.cs">
+      <DependentUpon>registrarSistemaQA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\EvaluacionAlertaPop.aspx.cs">
+      <DependentUpon>EvaluacionAlertaPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\EvaluacionAlertaPop.aspx.designer.cs">
+      <DependentUpon>EvaluacionAlertaPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\login_Alertas.aspx.cs">
+      <DependentUpon>login_Alertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\login_Alertas.aspx.designer.cs">
+      <DependentUpon>login_Alertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\RegistrarAlerta.aspx.cs">
+      <DependentUpon>RegistrarAlerta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\RegistrarAlerta.aspx.designer.cs">
+      <DependentUpon>RegistrarAlerta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\registrarElementoClave.aspx.cs">
+      <DependentUpon>registrarElementoClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\registrarElementoClave.aspx.designer.cs">
+      <DependentUpon>registrarElementoClave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\ReporteAlerta.aspx.cs">
+      <DependentUpon>ReporteAlerta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\ReporteAlerta.aspx.designer.cs">
+      <DependentUpon>ReporteAlerta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alerta\ReportePlanAccion.aspx.cs">
+      <DependentUpon>ReportePlanAccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alerta\ReportePlanAccion.aspx.designer.cs">
+      <DependentUpon>ReportePlanAccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\login_incidentes.aspx.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\login_incidentes.aspx.designer.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\prueba.aspx.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\prueba.aspx.designer.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\RegistrarComportamiento.aspx.cs">
+      <DependentUpon>RegistrarComportamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\RegistrarComportamiento.aspx.designer.cs">
+      <DependentUpon>RegistrarComportamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\registrarFormato.aspx.cs">
+      <DependentUpon>registrarFormato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\registrarFormato.aspx.designer.cs">
+      <DependentUpon>registrarFormato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\registrarSubCategorias.aspx.cs">
+      <DependentUpon>registrarSubCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\registrarSubCategorias.aspx.designer.cs">
+      <DependentUpon>registrarSubCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comportamiento\ReporteComportamiento.aspx.cs">
+      <DependentUpon>ReporteComportamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comportamiento\ReporteComportamiento.aspx.designer.cs">
+      <DependentUpon>ReporteComportamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_mobile.aspx.cs">
+      <DependentUpon>Login_mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_mobile.aspx.designer.cs">
+      <DependentUpon>Login_mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RRHH\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\login_incidentes.aspx.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\login_incidentes.aspx.designer.cs">
+      <DependentUpon>login_incidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scorecard.aspx.cs">
+      <DependentUpon>Scorecard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scorecard.aspx.designer.cs">
+      <DependentUpon>Scorecard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Triangulo.aspx.cs">
+      <DependentUpon>Triangulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Triangulo.aspx.designer.cs">
+      <DependentUpon>Triangulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\ActualizarTrigger.aspx.cs">
+      <DependentUpon>ActualizarTrigger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\ActualizarTrigger.aspx.designer.cs">
+      <DependentUpon>ActualizarTrigger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\ActualizarTriggerPopUp.aspx.cs">
+      <DependentUpon>ActualizarTriggerPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\ActualizarTriggerPopUp.aspx.designer.cs">
+      <DependentUpon>ActualizarTriggerPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\AdministrarRiesgo.aspx.cs">
+      <DependentUpon>AdministrarRiesgo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\AdministrarRiesgo.aspx.designer.cs">
+      <DependentUpon>AdministrarRiesgo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\login_Trigger.aspx.cs">
+      <DependentUpon>login_Trigger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\login_Trigger.aspx.designer.cs">
+      <DependentUpon>login_Trigger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\RegistrarTrigger.aspx.cs">
+      <DependentUpon>RegistrarTrigger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\RegistrarTrigger.aspx.designer.cs">
+      <DependentUpon>RegistrarTrigger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trigger\ReporteTrigger.aspx.cs">
+      <DependentUpon>ReporteTrigger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trigger\ReporteTrigger.aspx.designer.cs">
+      <DependentUpon>ReporteTrigger.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="admin\images\logos\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Indicadores\css\fonts\" />
+    <Folder Include="LUPs\css\fonts\" />
+    <Folder Include="Novedades\Archivos\" />
+    <Folder Include="Novedades\css\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\AdminMaster.Master" />
+    <Content Include="admin\css\img\vssver2.scc" />
+    <Content Include="admin\js\sidr-package-1.0.0\component.json" />
+    <Content Include="admin\js\sidr-package-1.0.0\README.md" />
+    <Content Include="Comportamiento\css\img\vssver2.scc" />
+    <Content Include="Comportamiento\AdminMaster.Master" />
+    <Content Include="Comportamiento\js\sidr-package-1.0.0\component.json" />
+    <Content Include="Comportamiento\js\sidr-package-1.0.0\README.md" />
+    <Content Include="Trigger\css\img\vssver2.scc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IncidentesBE\IncidentesBE.csproj">
+      <Project>{683cfc30-ca50-4756-b635-2d05bfddedf3}</Project>
+      <Name>IncidentesBE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IncidentesBL\IncidentesBL.csproj">
+      <Project>{a7849203-854e-4231-aec3-4dfade1737e9}</Project>
+      <Name>IncidentesBL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Indicadores\Reportes\rptEvaColega.rdlc" />
+    <EmbeddedResource Include="Indicadores\Reportes\rptReporteColegaAll.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64786</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49910/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,46 @@
+﻿body {
+    background-color: #FFCC99;
+}
+
+    body .table {
+        padding: 12px;
+    }
+
+.form_row {
+    font-family: 'PTSansRegular';
+    font-size: 13px;
+    display: flexbox;
+    border: 1px solid #aaa;
+    color: #ffffff; 
+    background-color: #F96;
+    line-height: 16px;
+    padding: 1px 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.form_lab {
+    font-family: 'PTSansRegular';
+    font-size: 13px;
+    display: flexbox;
+    border: 1px solid #aaa;
+    color: #ffffff;
+    background-color: #aaa;
+    line-height: 14px;
+    padding: 1px 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.form_cal {
+    font-family: 'PTSansRegular';
+    font-size: 13px;
+    border: 1px solid #aaa;
+    color: #ffffff;
+    overflow: hidden;
+    background: url(img/calendario.png) no-repeat right #F96;
+    border-radius: 10px;
+    text-align:center;
+}

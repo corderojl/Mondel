@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{683CFC30-CA50-4756-B635-2D05BFDDEDF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IncidentesBE</RootNamespace>
+    <AssemblyName>IncidentesBE</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALR_AlertasBE.cs" />
+    <Compile Include="ALR_ElementoClaveBE.cs" />
+    <Compile Include="ALR_SistemaqaBE.cs" />
+    <Compile Include="AUD_AuditoriaBE.cs" />
+    <Compile Include="AUD_Auditoria_PreguntaBE.cs" />
+    <Compile Include="AUD_PreguntaBE.cs" />
+    <Compile Include="AUD_QuienAuditarBE.cs" />
+    <Compile Include="AUD_AuditoriaTipoBE.cs" />
+    <Compile Include="COM_CategoriasBE.cs" />
+    <Compile Include="COM_ComportamientoBE.cs" />
+    <Compile Include="COM_FormatosBE.cs" />
+    <Compile Include="COM_SubCategoriasBE.cs" />
+    <Compile Include="EVA_AreaBE.cs" />
+    <Compile Include="EVA_AreaLaborBE.cs" />
+    <Compile Include="EVA_CategoriaBE.cs" />
+    <Compile Include="EVA_CurvaBE.cs" />
+    <Compile Include="EVA_EvaluacionBE.cs" />
+    <Compile Include="EVA_EvaluacionDetalleBE.cs" />
+    <Compile Include="EVA_IndicadorBE.cs" />
+    <Compile Include="EVA_Indicador_SubCategoriaBE.cs" />
+    <Compile Include="EVA_SubCategoriaBE.cs" />
+    <Compile Include="Fnc_FuncionariosBE.cs" />
+    <Compile Include="LUP_AprobadorBE.cs" />
+    <Compile Include="LUP_CategoriaBE.cs" />
+    <Compile Include="LUP_LupBE.cs" />
+    <Compile Include="NOV_NovedadesBE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REC_CategoriasBE.cs" />
+    <Compile Include="REC_ReconocimientosBE.cs" />
+    <Compile Include="TB_AccesosBE.cs" />
+    <Compile Include="TB_AreaBE.cs" />
+    <Compile Include="TB_AreaLaborBE.cs" />
+    <Compile Include="TB_CondicionInvolucradaBE.cs" />
+    <Compile Include="TB_ContratistaBE.cs" />
+    <Compile Include="TB_CriticidadBE.cs" />
+    <Compile Include="TB_DepartamentoBE.cs" />
+    <Compile Include="TB_EstatusOperacionalBE.cs" />
+    <Compile Include="TB_GuardiaBE.cs" />
+    <Compile Include="TB_IncidentesBE.cs" />
+    <Compile Include="TB_CausaInmediataBE.cs" />
+    <Compile Include="TB_CausaRaizBE.cs" />
+    <Compile Include="TB_ClasificacionBE.cs" />
+    <Compile Include="TB_ElementoClaveBE.cs" />
+    <Compile Include="TB_EquipoAfectadoBE.cs" />
+    <Compile Include="TB_ParteCuerpoBE.cs" />
+    <Compile Include="TB_PilarBE.cs" />
+    <Compile Include="TB_PlanAccionBE.cs" />
+    <Compile Include="TB_ResponsableBE.cs" />
+    <Compile Include="TB_ResponsableCategoriaBE.cs" />
+    <Compile Include="TB_ResponsablePilarBE.cs" />
+    <Compile Include="TB_RiesgoInvolucradoBE.cs" />
+    <Compile Include="TB_RolBE.cs" />
+    <Compile Include="TB_SectorBE.cs" />
+    <Compile Include="TB_TecnologiaBE.cs" />
+    <Compile Include="TB_TipoDanioBE.cs" />
+    <Compile Include="TEM_ComportamientoEstadistica.cs" />
+    <Compile Include="TRG_RiesgosBE.cs" />
+    <Compile Include="TRG_TriggerBE.cs" />
+    <Compile Include="TRG_Trigger_RiesgosBE.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

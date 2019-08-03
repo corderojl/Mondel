@@ -1,0 +1,19 @@
+
+#header #top_nav #top_menu ul li
+{
+    padding-right: 48px;
+}
+#header #top_nav #top_menu ul li a:hover, 
+#header #top_nav #top_menu ul li a.active
+{
+    font-family: 'PTSansBold';
+    color: #000;
+    text-decoration: underline;
+    text-shadow: none;
+}
+.custom_form_loading
+{
+	opacity: 0.70;
+	-moz-opacity: 0.70;
+	filter: alpha(opacity=70);
+} 

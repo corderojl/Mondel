@@ -1,0 +1,94 @@
+﻿
+form {
+  background:#164d86;
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 550px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+   top: 50px;
+   background-image:url(images/estrella.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+form input[type="text"], textarea  {
+    /*border: none;*/
+    background-color: transparent;
+    color: #fff;
+    /* Other stuff: font-weight, font-size */
+}
+input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+textarea#txtMotivo {
+  width: 375px;
+  height: 150px;
+}
+textarea#txtMotivo {
+  width: 366px;
+  height: 62px;
+  display: block;
+}
+select {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color:#fff;
+    width: 375px;
+    height: 25px;
+   display: block;
+  border: 1px solid #999;
+}
+option {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color:#f8b55f;
+    font-weight:bold;
+}
+
+#btnRegistrar {
+  width: 100px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #09C;
+  color: #fff;
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #999;
+}
+
+#btnRegistrar:hover {
+  background: #fff;
+  color: #09C;
+}
+textarea:focus, input:focus {
+  border: 1px solid #09C;
+}
+h1 {
+  text-align: center;
+  color:#fff;
+}
+

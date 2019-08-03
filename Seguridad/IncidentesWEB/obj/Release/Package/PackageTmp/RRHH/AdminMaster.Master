@@ -1,0 +1,67 @@
+﻿    <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" 
+    Inherits="IncidentesWEB.RRHH.AdminMaster" %>
+
+<%@ Import Namespace="IncidentesBE" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Mondelez</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=100">
+    <link href="../default.aspxpg.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_cms.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="admin_master_form" runat="server">
+        <div id="admin_container">
+            <div id="header">
+                <div id="top_nav">
+                    <div id="logo_home">
+                        <a href="../default.aspx"></a>
+                    </div>
+                    <div id="top_menu">
+                        <!-- #include virtual="../include/menu_top.inc.aspx" -->
+                        <div id="content_search">
+                            <ul>
+                                <% if (((Fnc_FuncionariosBE)Session["Fnc_Funcionarios"]).Funcionario_Id > 0)
+                                   {
+                                       Response.Write("<h3>" + ((Fnc_FuncionariosBE)Session["Fnc_Funcionarios"]).Funcionario_Nome + "</h3>");
+                                       Response.Write("<li class=\"last\"><a href=\"logout.aspx\"> cerrar sesión</a></li>");
+                                   } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="top_tips">
+                    <div id="tips">
+                        <ul id="lista_tips">
+                            <li><span>Sistema de Control de Incidentes</span></li>
+                        </ul>
+                        <ul id="lista_tips_Izq">
+                            <li>
+                                <a href="default.aspx">Menú&nbsp;</a>|&nbsp;
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="admin_cph_content" runat="server">
+            </asp:ContentPlaceHolder>
+            <div id="footer">
+                <div id="footer_copy">
+                    <div class="copy">
+                        <span class="left">Copyright 2017.  All rights reserved.</span> <span class="derecha">Powered by <a href="mailto:chefo@gmail.com">Support contact</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</body>
+</html>

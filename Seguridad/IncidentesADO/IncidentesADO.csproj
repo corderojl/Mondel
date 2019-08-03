@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF509227-40A2-400B-B484-2CA9888565E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IncidentesADO</RootNamespace>
+    <AssemblyName>IncidentesADO</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.7\lib\net35-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALR_AlertasADO.cs" />
+    <Compile Include="ALR_ElementoClaveADO.cs" />
+    <Compile Include="ALR_SistemaqaADO.cs" />
+    <Compile Include="AUD_AuditoriaADO.cs" />
+    <Compile Include="AUD_Auditoria_PreguntaADO.cs" />
+    <Compile Include="AUD_PreguntaADO.cs" />
+    <Compile Include="AUD_AuditoriaTipoADO.cs" />
+    <Compile Include="AUD_QuienAuditarADO.cs" />
+    <Compile Include="COM_CategoriasADO.cs" />
+    <Compile Include="COM_ComportamientoADO.cs" />
+    <Compile Include="COM_FormatosADO.cs" />
+    <Compile Include="COM_SubCategoriasADO.cs" />
+    <Compile Include="ConexionADO.cs" />
+    <Compile Include="EVA_AreaLaborADO.cs" />
+    <Compile Include="EVA_CategoriaADO.cs" />
+    <Compile Include="EVA_EvaluacionADO.cs" />
+    <Compile Include="EVA_EvaluacionDetalleADO.cs" />
+    <Compile Include="EVA_SubCategoriaADO.cs" />
+    <Compile Include="Fnc_FuncionariosADO.cs" />
+    <Compile Include="GRF_GraficosADO.cs" />
+    <Compile Include="LUP_AprobadorADO.cs" />
+    <Compile Include="LUP_CategoriaADO.cs" />
+    <Compile Include="LUP_LupADO.cs" />
+    <Compile Include="TB_CriticidadADO.cs" />
+    <Compile Include="TB_PilarADO.cs" />
+    <Compile Include="MailADO.cs" />
+    <Compile Include="NOV_NovedadesADO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REC_CategoriasADO.cs" />
+    <Compile Include="REC_ReconocimientosADO.cs" />
+    <Compile Include="SOP_SopADO.cs" />
+    <Compile Include="TB_AccesosADO.cs" />
+    <Compile Include="TB_AreaADO.cs" />
+    <Compile Include="TB_AreaLaborADO.cs" />
+    <Compile Include="TB_CondicionInvolucradaADO.cs" />
+    <Compile Include="TB_ContratistaADO.cs" />
+    <Compile Include="TB_DepartamentoADO.cs" />
+    <Compile Include="TB_EstatusOperacionalADO.cs" />
+    <Compile Include="TB_GuardiaADO.cs" />
+    <Compile Include="TB_IncidentesADO.cs" />
+    <Compile Include="TB_CausaInmediataADO.cs" />
+    <Compile Include="TB_CausaRaizADO.cs" />
+    <Compile Include="TB_ClasificacionADO.cs" />
+    <Compile Include="TB_ElementoClaveADO.cs" />
+    <Compile Include="TB_EquipoAfectadoADO.cs" />
+    <Compile Include="TB_ParteCuerpoADO.cs" />
+    <Compile Include="TB_PlanAccionADO.cs" />
+    <Compile Include="TB_ResponsableADO.cs" />
+    <Compile Include="TB_ResponsableCategoriaADO.cs" />
+    <Compile Include="TB_ResponsablePilarADO.cs" />
+    <Compile Include="TB_RiesgoInvolucradoADO.cs" />
+    <Compile Include="TB_RolADO.cs" />
+    <Compile Include="TB_SectorADO.cs" />
+    <Compile Include="TB_TecnologiaADO.cs" />
+    <Compile Include="TB_TipoDanioADO.cs" />
+    <Compile Include="TRG_RiesgosADO.cs" />
+    <Compile Include="TRG_TriggerADO.cs" />
+    <Compile Include="TRG_Trigger_RiesgosADO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IncidentesBE\IncidentesBE.csproj">
+      <Project>{683cfc30-ca50-4756-b635-2d05bfddedf3}</Project>
+      <Name>IncidentesBE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

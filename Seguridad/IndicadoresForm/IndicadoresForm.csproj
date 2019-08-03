@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F489F89A-C596-452D-9B02-96BDC180DC77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IndicadoresForm</RootNamespace>
+    <AssemblyName>IndicadoresForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexionADO.cs" />
+    <Compile Include="DB_IndicadoresDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_IndicadoresDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCargaRapida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCargaRapida.Designer.cs">
+      <DependentUpon>FrmCargaRapida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCartaPremio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCartaPremio.Designer.cs">
+      <DependentUpon>FrmCartaPremio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEjemplo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEjemplo.Designer.cs">
+      <DependentUpon>FrmEjemplo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteCarta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteCarta.Designer.cs">
+      <DependentUpon>FrmReporteCarta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Importar.cs" />
+    <Compile Include="rptCartaPremio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCartaPremio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EvaluacionIndicadoresMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionIndicadoresMDI.Designer.cs">
+      <DependentUpon>EvaluacionIndicadoresMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCargaRapida.resx">
+      <DependentUpon>FrmCargaRapida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCartaPremio.resx">
+      <DependentUpon>FrmCartaPremio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEjemplo.resx">
+      <DependentUpon>FrmEjemplo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteCarta.resx">
+      <DependentUpon>FrmReporteCarta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCartaPremio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCartaPremio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionIndicadoresMDI.resx">
+      <DependentUpon>EvaluacionIndicadoresMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptCartaResultado.rdlc" />
+    <EmbeddedResource Include="rptEvaColega.rdlc" />
+    <None Include="app.config" />
+    <None Include="DB_IndicadoresDataSet.xsc">
+      <DependentUpon>DB_IndicadoresDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_IndicadoresDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_IndicadoresDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_IndicadoresDataSet.xss">
+      <DependentUpon>DB_IndicadoresDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Query\indicadoresV2.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IncidentesBE\IncidentesBE.csproj">
+      <Project>{683cfc30-ca50-4756-b635-2d05bfddedf3}</Project>
+      <Name>IncidentesBE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IncidentesBL\IncidentesBL.csproj">
+      <Project>{a7849203-854e-4231-aec3-4dfade1737e9}</Project>
+      <Name>IncidentesBL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
