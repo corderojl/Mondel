@@ -31,10 +31,12 @@
                
                 <h2>Administración</h2>
                 <ul>
-                    <li><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="registrarFormato.aspx">Administrar Formatos</a></font></li>
+                    
+                     <li><a href="#" onclick="PopUp('registrarSubCategorias.aspx',20,20,950,678)"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Administrar Categoria</font></a></li>
+                    <asp:Literal ID="ltlIncidentes" runat="server"></asp:Literal>
                 </ul>
             </div>
         </div>
-        <asp:Literal ID="ltlIncidentes" runat="server"></asp:Literal>
+        
     </div>
 </asp:Content>

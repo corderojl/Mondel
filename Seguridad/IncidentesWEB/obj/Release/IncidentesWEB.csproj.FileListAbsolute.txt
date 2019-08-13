@@ -13,3 +13,18 @@ C:\ProyMondelez\Seguridad\IncidentesWEB\obj\Release\RdlCompile.compiled
 C:\ProyMondelez\Seguridad\IncidentesWEB\obj\Release\IncidentesWEB.dll
 C:\ProyMondelez\Seguridad\IncidentesWEB\obj\Release\IncidentesWEB.pdb
 C:\ProyMondelez\Seguridad\IncidentesWEB\bin\itextsharp.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesWEB.dll.config
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesWEB.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesWEB.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBE.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBL.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\log4net.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesADO.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\Microsoft.SqlServer.Types.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBE.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBL.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\log4net.xml
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesADO.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Release\IncidentesWEB.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Release\IncidentesWEB.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Release\IncidentesWEB.pdb

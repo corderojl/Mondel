@@ -71,14 +71,14 @@
                                 <asp:DropDownList ID="ddlDepartamento" runat="server">
                                 </asp:DropDownList>
                             </td>
-                            <td>Guardia:</td>
-                            <td>
-                                <asp:DropDownList ID="ddlGuardia" runat="server">
-                                </asp:DropDownList>
-                            </td>
                             <td>Área:</td>
                             <td>
                                 <asp:DropDownList ID="ddlArea" runat="server">
+                                </asp:DropDownList>
+                            </td>
+                            <td>Originador:</td>
+                            <td>
+                                <asp:DropDownList ID="ddlOriginador" runat="server">
                                 </asp:DropDownList>
                             </td>
                         </tr>
@@ -110,11 +110,9 @@
                                     <asp:ListItem Value="3">Solucionado</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
-                            <td>Originador:</td>
+                            <td>&nbsp;</td>
                             <td>
-                                <asp:DropDownList ID="ddlOriginador" runat="server">
-                                </asp:DropDownList>
-                            </td>
+                                &nbsp;</td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>

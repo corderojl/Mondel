@@ -163,3 +163,5 @@ C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.Properti
 C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.csproj.GenerateResource.Cache
 C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.exe
 C:\Mondel\Seguridad - copia (2)\IncidentesMail\obj\Debug\IncidentesMail.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\log4net.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesMail\bin\Debug\log4net.xml

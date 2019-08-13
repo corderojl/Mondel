@@ -238,7 +238,7 @@
                     <HeaderTemplate>
                         <!-- <table class='CSSTableGenerator3'>-->
                         <tr>
-                            <th width="100px" colspan="7">Solo para RRHH</th>
+                            <th width="100px" colspan="7">Solo por los Managers</th>
                         </tr>
                         <tr>
                             <th width="100px" colspan="4">Indicador</th>

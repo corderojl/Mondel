@@ -232,5 +232,15 @@ namespace IncidentesWEB.Indicadores
             Response.Redirect("download.aspx?_Anio=" + _Anio + "&_Superior=" + _Superior + "&_Departamento_id=" + _Departamento_id + "&_Estado=" + _Estado, false);
             HttpContext.Current.ApplicationInstance.CompleteRequest();
         }
+
+        protected void btnCarta_Click(object sender, EventArgs e)
+        {
+            string _anio, _lider, _Departamento_id, script;
+            _anio = ddlAnio.SelectedValue + "-" + ddlTipo.SelectedValue;
+            _lider = ddlLider.SelectedValue;
+            _Departamento_id = ddlDepartamento.SelectedValue;
+            script = @"PopUp('rptCartaFuncionario.aspx?Departamento=" + _Departamento_id + "&Anio=" + _anio + "&Lider_id=" + _lider + "')";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "invocarfuncion", script, true);
+        }
     }
 }

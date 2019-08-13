@@ -55,6 +55,5 @@ C:\Mondel\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.dll
 C:\Mondel\Seguridad\IncidentesBE\obj\Debug\IncidentesBE.pdb
 C:\Mondel\Seguridad - copia (2)\IncidentesBE\bin\Debug\IncidentesBE.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesBE\bin\Debug\IncidentesBE.pdb
-C:\Mondel\Seguridad - copia (2)\IncidentesBE\obj\Debug\IncidentesBE.csprojResolveAssemblyReference.cache
 C:\Mondel\Seguridad - copia (2)\IncidentesBE\obj\Debug\IncidentesBE.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesBE\obj\Debug\IncidentesBE.pdb

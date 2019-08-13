@@ -239,6 +239,14 @@ width: 80px;
 height: 35px;
 float: right;
 }
+.botonC
+{
+background: url(img/carta.png) no-repeat;
+display: block;
+width: 80px;
+height: 35px;
+float: right;
+}
 .botonF {
   background: #695380;
   background-image: -webkit-linear-gradient(top, #695380, #432660);

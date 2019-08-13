@@ -49,7 +49,7 @@
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -215,7 +215,9 @@
     <Content Include="Images\flechaabajo.jpg" />
     <Content Include="Images\flechaabajo.png" />
     <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logo2.jpg" />
     <Content Include="Images\LogoMondelez.png" />
+    <Content Include="Images\NewLogoMondelez.png" />
     <Content Include="Images\pg_logo111.gif" />
     <Content Include="Images\pg_logo3.gif" />
     <Content Include="Images\Print.gif" />
@@ -278,6 +280,7 @@
     <Content Include="Indicadores\Images\btnCerrar1.png" />
     <Content Include="Indicadores\Images\btnEliminar.png" />
     <Content Include="Indicadores\Images\carga.gif" />
+    <Content Include="Indicadores\css\img\carta.png" />
     <Content Include="Indicadores\js\sidr-package-1.0.0\jquery.sidr.min.js" />
     <Content Include="Indicadores\js\sidr-package-1.0.0\stylesheets\jquery.sidr.dark.css" />
     <Content Include="Indicadores\js\sidr-package-1.0.0\stylesheets\jquery.sidr.light.css" />
@@ -300,6 +303,7 @@
     <Content Include="Indicadores\RegistrarFuncionarioPop.aspx" />
     <Content Include="Indicadores\ReporteCurva.aspx" />
     <Content Include="Indicadores\ReporteIndicadores.aspx" />
+    <Content Include="Indicadores\rptCartaFuncionario.aspx" />
     <Content Include="Indicadores\rptEvaluacionColegaAll.aspx" />
     <Content Include="Indicadores\rptEvaluacionColega.aspx" />
     <Content Include="Indicadores\Scripts\jquery-1.2.6.min.js" />
@@ -1715,6 +1719,13 @@
     <Compile Include="Indicadores\ReporteIndicadores.aspx.designer.cs">
       <DependentUpon>ReporteIndicadores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Indicadores\rptCartaFuncionario.aspx.cs">
+      <DependentUpon>rptCartaFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indicadores\rptCartaFuncionario.aspx.designer.cs">
+      <DependentUpon>rptCartaFuncionario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Indicadores\rptEvaluacionColegaAll.aspx.cs">
       <DependentUpon>rptEvaluacionColegaAll.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2376,6 +2387,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Indicadores\Reportes\rptCartaFuncionario.rdlc" />
     <EmbeddedResource Include="Indicadores\Reportes\rptEvaColega.rdlc" />
     <EmbeddedResource Include="Indicadores\Reportes\rptReporteColegaAll.rdlc" />
   </ItemGroup>

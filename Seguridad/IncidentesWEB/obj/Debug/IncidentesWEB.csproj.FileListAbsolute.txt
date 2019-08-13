@@ -119,9 +119,6 @@ C:\ProyMondelez\Seguridad\IncidentesWEB\obj\Debug\IncidentesWEB.pdb
 C:\Mondel\Seguridad\IncidentesWEB\obj\Debug\IncidentesWEB.csprojResolveAssemblyReference.cache
 C:\Mondel\Seguridad\IncidentesWEB\obj\Debug\IncidentesWEB.dll
 C:\Mondel\Seguridad\IncidentesWEB\obj\Debug\IncidentesWEB.pdb
-C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\IncidentesWEB.csprojResolveAssemblyReference.cache
-C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\IncidentesWEB.dll
-C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\IncidentesWEB.pdb
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesWEB.dll.config
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesWEB.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesWEB.pdb
@@ -129,8 +126,14 @@ C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBE.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBL.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\log4net.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesADO.dll
-C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\Microsoft.SqlServer.Types.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBE.pdb
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesBL.pdb
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\log4net.xml
 C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\IncidentesADO.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\IncidentesWEB.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\RdlCompile.cache
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\RdlCompile.compiled
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\IncidentesWEB.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\obj\Debug\IncidentesWEB.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesWEB\bin\es\Microsoft.ReportViewer.WebForms.resources.dll

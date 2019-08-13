@@ -98,17 +98,7 @@
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Display="Dynamic" ControlToValidate="ddlArea" InitialValue="0" Font-Size="X-Large"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
-                        <tr>
-                            <td align="right" width="80">Guardia:</td>
-                            <td width="180">
-                                <asp:DropDownList ID="ddlGuardia" runat="server" CssClass="form_row">
-                                </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlGuardia" Display="Dynamic" ErrorMessage="*" Font-Size="X-Large" InitialValue="0"></asp:RequiredFieldValidator>
-                            </td>
-                            <td align="right" width="80"></td>
-                            <td width="300">
-                                &nbsp;</td>
-                        </tr>
+         
                         <tr>
                             <td align="right" width="80">Tipo de Evento:</td>
                             <td width="180">

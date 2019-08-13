@@ -85,6 +85,15 @@ namespace IncidentesWEB.Indicadores {
         protected global::System.Web.UI.WebControls.Button btnExportar;
         
         /// <summary>
+        /// Control btnCarta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCarta;
+        
+        /// <summary>
         /// Control rpPlanAccion.
         /// </summary>
         /// <remarks>

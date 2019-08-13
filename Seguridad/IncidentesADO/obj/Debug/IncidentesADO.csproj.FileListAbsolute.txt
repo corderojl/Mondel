@@ -78,9 +78,9 @@ C:\Mondel\Seguridad\IncidentesADO\obj\Debug\IncidentesADO.pdb
 C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\IncidentesADO.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\IncidentesADO.pdb
 C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\IncidentesBE.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\log4net.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\IncidentesBE.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\log4net.xml
 C:\Mondel\Seguridad - copia (2)\IncidentesADO\obj\Debug\IncidentesADO.csprojResolveAssemblyReference.cache
 C:\Mondel\Seguridad - copia (2)\IncidentesADO\obj\Debug\IncidentesADO.dll
 C:\Mondel\Seguridad - copia (2)\IncidentesADO\obj\Debug\IncidentesADO.pdb
-C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\log4net.dll
-C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Debug\log4net.xml

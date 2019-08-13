@@ -5,3 +5,12 @@ C:\ProyMondelez\Seguridad\IncidentesADO\bin\Release\IncidentesBE.pdb
 C:\ProyMondelez\Seguridad\IncidentesADO\obj\Release\IncidentesADO.csprojResolveAssemblyReference.cache
 C:\ProyMondelez\Seguridad\IncidentesADO\obj\Release\IncidentesADO.dll
 C:\ProyMondelez\Seguridad\IncidentesADO\obj\Release\IncidentesADO.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Release\IncidentesADO.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Release\IncidentesADO.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Release\IncidentesBE.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Release\log4net.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Release\IncidentesBE.pdb
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\bin\Release\log4net.xml
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\obj\Release\IncidentesADO.csprojResolveAssemblyReference.cache
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\obj\Release\IncidentesADO.dll
+C:\Mondel\Seguridad - copia (2)\IncidentesADO\obj\Release\IncidentesADO.pdb

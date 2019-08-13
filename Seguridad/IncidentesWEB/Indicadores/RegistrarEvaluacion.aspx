@@ -61,7 +61,7 @@
                                 <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="True" CssClass="form_row" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </td>
-                            <td>Lider:</td>
+                            <td align="right" width="80">Lider:</td>
                             <td>
       
                                 <asp:DropDownList ID="ddlLider" runat="server" AutoPostBack="True" CssClass="form_row" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
@@ -106,6 +106,7 @@
                             <td align="right" width="80">&nbsp;</td>
                             <td width="300">
                                 <asp:Button ID="btnExportar" runat="server" Text="Exportar" OnClick="btnExportar_Click" CssClass="botonX"/>
+                                <asp:Button ID="btnCarta" runat="server" Text="Carta" CssClass="botonC" OnClick="btnCarta_Click"/>
                             </td>
                         </tr>
                     </table>

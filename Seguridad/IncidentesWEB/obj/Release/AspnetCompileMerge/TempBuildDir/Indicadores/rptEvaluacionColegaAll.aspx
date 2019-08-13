@@ -83,7 +83,7 @@
 
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-            <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" style="margin-right: 27px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="767px">
+            <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" style="margin-right: 27px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="767px" Height="529px">
                 <LocalReport ReportEmbeddedResource="IncidentesWEB.Indicadores.Reportes.rptReporteColegaAll.rdlc">
                     <DataSources>
                         <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSet1" />

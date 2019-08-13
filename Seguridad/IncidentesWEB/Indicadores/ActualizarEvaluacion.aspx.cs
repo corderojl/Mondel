@@ -449,11 +449,11 @@ groupTable($('#myTable2 tr:has(td)'), 0, 3);
                     if (ddlAnio.SelectedValue == anio.ToString() && ddlTipo.SelectedValue == medioanio.ToString())
                     {
 
-                        _TB_AccesosBE = _TB_AccesosBL.TraerTB_Accesos(((Fnc_FuncionariosBE)Session["Fnc_Funcionarios"]).Funcionario_Id, 7);
-                        if (_TB_AccesosBE.Permiso == 2)
+                        //_TB_AccesosBE = _TB_AccesosBL.TraerTB_Accesos(((Fnc_FuncionariosBE)Session["Fnc_Funcionarios"]).Funcionario_Id, 7);
+                        //if (_TB_AccesosBE.Permiso == 2)
                             ib.Enabled = true;
-                        else
-                            ib.Enabled = false;
+                        //else
+                        //    ib.Enabled = false;
                     }
                     else
                     {

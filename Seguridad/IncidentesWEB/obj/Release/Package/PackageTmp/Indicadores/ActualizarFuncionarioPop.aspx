@@ -22,6 +22,11 @@
         function CancelarExito() {
             window.close();
         }
+        function confirmar()
+        {
+            if (!confirm('¿Esta seguro de restaurar la contraseña?'))
+                return false;
+        }
     </script>
 </head>
 <body>
@@ -146,6 +151,7 @@
                 </asp:UpdatePanel>
                 <input id="btnCancelar" type="button" value="Cancelar" class="botonF" onclick="CancelarExito();" />
                 <asp:Button ID="btnGuardar" runat="server" OnClick="Button2_Click" Text="Guardar" CssClass="botonF" />
+                <asp:Button ID="btnRestaurar" runat="server" Text="Restaurar Contraseña" CssClass="botonF" OnClientClick="return confirmar();" OnClick="btnRestaurar_Click"/>
                 </td>
             </div>
         </div>

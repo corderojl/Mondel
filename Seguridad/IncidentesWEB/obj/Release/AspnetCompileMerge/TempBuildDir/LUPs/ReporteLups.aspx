@@ -111,7 +111,7 @@
             <table style="width: 95%;">
                 <tr>
                     <td>
-                        <asp:CheckBox ID="ckbInicio" runat="server" Text="Fecha del Registro de LUP's" Checked="True" />
+                       <!-- <asp:CheckBox ID="ckbInicio" runat="server" Text="Fecha del Registro de LUP's" Checked="True" />-->
                     </td>
                     <td>Desde:</td>
 

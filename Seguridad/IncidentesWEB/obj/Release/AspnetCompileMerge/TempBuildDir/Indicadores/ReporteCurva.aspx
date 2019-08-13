@@ -39,9 +39,9 @@
                             <td>
                                 <asp:DropDownList ID="ddlAnio" runat="server">
                                     <asp:ListItem Selected="True" Value="%%">(Todos)</asp:ListItem>
-                                    <asp:ListItem Value="%%">(Todos)</asp:ListItem>
                                     <asp:ListItem Value="2017">2017</asp:ListItem>
                                     <asp:ListItem Value="2018">2018</asp:ListItem>
+                                    <asp:ListItem Value="2019">2019</asp:ListItem>
                                 </asp:DropDownList>
 
                             </td>
